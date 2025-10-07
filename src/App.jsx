@@ -9,6 +9,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
 import Gallery from "../src/Page/Gallery.jsx"
 import Servicepage from "../src/Page/Servicepage.jsx"
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import GDPRConsent from "./components/GDPRBanner.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
+      <GDPRConsent />
     </Router>
   );
 }
