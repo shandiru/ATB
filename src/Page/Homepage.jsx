@@ -4,6 +4,7 @@ import AboutSection from "../components/Homepage/AboutSection"
 import StatsSection from "../components/Homepage/StatsSection"
 import TestimonialsSection from "../components/Homepage/TestimonialsSection"
 import CallToActionSection from "../components/Homepage/CallToActionSection"
+import Whychoose from "../components/Homepage/WhyChoose";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Hero />
       <StatsSection />
       <AboutSection />
+      <Whychoose />
       <ServicesSection />
       <TestimonialsSection />
       <CallToActionSection />
