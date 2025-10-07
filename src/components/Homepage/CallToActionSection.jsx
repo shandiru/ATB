@@ -14,8 +14,8 @@ const CallToActionSection = () => {
 
   return (
     <section
-      id="contact-cta"
-      className="relative bg-[#1E3A8A] text-white py-20 md:py-24 mb-16 overflow-hidden"
+      id="contact"
+      className="relative bg-[#1E3A8A] text-white py-20 md:py-24 overflow-hidden scroll-m-24"
     >
       <div className="absolute inset-0 "></div>
 

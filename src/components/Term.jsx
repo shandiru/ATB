@@ -5,7 +5,7 @@ const TermsConditions = () => {
   return (
     <section className="bg-black text-white mx-auto px-4 py-8">
           <div className="max-w-6xl mx-auto">
-              <h1 className="text-3xl font-semibold text-center mb-6">Website Terms of Use</h1>
+              <h1 className="text-3xl font-semibold text-center mb-6 mt-20">Website Terms of Use</h1>
               <p className="text-center text-gray-200">Last updated: 09/09/25</p>
 
               <div className="mt-8 space-y-6">
@@ -28,7 +28,7 @@ const TermsConditions = () => {
                   <section>
                       <h2 className="text-2xl font-medium">3. Intellectual Property</h2>
                       <p className="text-white">
-                          All content on this website (including text, images, graphics, and logos) is owned by or licensed to EAR WE GO
+                          All content on this website (including text, images, graphics, and logos) is owned by or licensed to  ATB Motor Engineers Ltd.
                           You may view, download, and print content for personal use only.
                           You must not copy, reproduce, or distribute our website content without prior written consent.
                       </p>
@@ -77,10 +77,10 @@ const TermsConditions = () => {
                           If you have any questions about these Terms of Use, please contact us:
                       </p>
                       <div className="text-white">
-                          <p><strong>EAR WE GO</strong></p>
-                          <p>Email: <a href="mailto:earwegosales@gmail.com" className="text-[#27AE60] hover:underline">earwegosales@gmail.com</a></p>
-                          <p>Phone: 0808 137 1961</p>
-                          <p>Address: Great Northern Rd, Derby, DE1 1LR</p>
+                          <p><strong>ATB Motor Engineers Ltd</strong></p>
+                          <p>Email: <a href="mailto:atbmotorengineers@gmail.com" className="text-[#1E3A8A] hover:underline">atbmotorengineers@gmail.com</a></p>
+                          <p>Phone: 01332 224229</p>
+                          <p>Address: 12 Wild Street Derby Derbyshire DE1 1GN</p>
                       </div>
                   </section>
               </div>

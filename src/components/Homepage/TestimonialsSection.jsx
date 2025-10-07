@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -86,7 +86,7 @@ const TestimonialsSection = () => {
 
   return (
     <section
-      className="relative py-20 bg-gray-50 overflow-hidden"
+      className="relative py-20 bg-gray-50 overflow-hidden scroll-m-10"
       id="testimonials"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
@@ -121,9 +121,8 @@ const TestimonialsSection = () => {
             <SwiperSlide key={index}>
               <div
                 data-aos={index % 2 === 0 ? "fade-up" : "fade-down"}
-                className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between h-[420px] hover:shadow-[0_0_25px_rgba(30,58,138,0.25)] transition-all duration-500 hover:-translate-y-2"
+                className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between h-[370px] hover:shadow-[0_0_25px_rgba(30,58,138,0.25)] transition-all duration-500 hover:-translate-y-2"
               >
-                {/* Avatar & Name */}
                 <div>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#1E3A8A] text-white font-semibold text-lg">
@@ -135,14 +134,12 @@ const TestimonialsSection = () => {
                     </div>
                   </div>
 
-                  {/* Stars */}
                   <div className="flex gap-1 mb-3 text-[#FACC15]">
                     {[...Array(5)].map((_, i) => (
                       <FaStar key={i} />
                     ))}
                   </div>
 
-                  {/* Review */}
                   <p className="text-gray-700 text-sm md:text-base leading-relaxed line-clamp-5">
                     {t.review}
                   </p>
@@ -150,7 +147,6 @@ const TestimonialsSection = () => {
 
                 <div className="mt-4">
                   <hr className="border-gray-200 my-3" />
-                  {/* Service */}
                   <p className="text-sm text-gray-500 font-medium">
                     <span className="text-[#1E3A8A] font-semibold">
                       Service:
@@ -163,18 +159,19 @@ const TestimonialsSection = () => {
           ))}
         </Swiper>
 
-        {/* Navigation Arrows */}
+        {/* Navigation Arrows with React Icons */}
         <button
           className="swiper-prev absolute top-1/2 -left-4 transform -translate-y-1/2 bg-[#1E3A8A]/90 hover:bg-[#0F216B] text-white p-3 md:p-4 rounded-full shadow-lg transition z-10"
           aria-label="Previous"
         >
-          ‹
+          <FaChevronLeft className="text-lg" />
         </button>
+
         <button
           className="swiper-next absolute top-1/2 -right-4 transform -translate-y-1/2 bg-[#1E3A8A]/90 hover:bg-[#0F216B] text-white p-3 md:p-4 rounded-full shadow-lg transition z-10"
           aria-label="Next"
         >
-          ›
+          <FaChevronRight className="text-lg" />
         </button>
       </div>
     </section>

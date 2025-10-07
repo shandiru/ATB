@@ -3,7 +3,7 @@ import React from 'react';
 const PrivacyPolicy = () => {
     return (
         <div className="mx-auto px-4 py-12 sm:px-6 lg:px-16 bg-black text-white">
-            <h1 className="text-4xl font-semibold text-center mb-8">Privacy Policy</h1>
+            <h1 className="text-4xl font-semibold text-center mb-8 mt-20">Privacy Policy</h1>
             <p className="text-center text-white">Last updated: 09/09/25</p>
 
             <div className="mt-8 space-y-6">
@@ -110,10 +110,10 @@ const PrivacyPolicy = () => {
                         If you have any questions about this Privacy Policy or how we handle your personal data, please contact us:
                     </p>
                     <div className="text-white">
-                        <p><strong>EAR WE GO</strong></p>
-                        <p>Email: <a href="mailto:earwegosales@gmail.com" className="text-[#27AE60] hover:underline">earwegosales@gmail.com</a></p>
-                        <p>Phone: 0808 137 1961</p>
-                        <p>Address: Great Northern Rd, Derby, DE1 1LR</p>
+                        <p><strong>ATB Motor Engineers Ltd</strong></p>
+                        <p>Email: <a href="mailto:atbmotorengineers@gmail.com" className="text-[#1E3A8A] hover:underline">atbmotorengineers@gmail.com</a></p>
+                        <p>Phone: 01332 224229</p>
+                        <p>Address: 12 Wild Street Derby Derbyshire DE1 1GN</p>
                     </div>
                     <p className="mt-2 text-white">
                         If you are not satisfied with our response, you have the right to lodge a complaint with the{' '}
@@ -121,7 +121,7 @@ const PrivacyPolicy = () => {
                             href="https://ico.org.uk/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[#27AE60] hover:underline"
+                            className="text-[#1E3A8A] hover:underline"
                         >
                             Information Commissioner’s Office (ICO)
                         </a>.

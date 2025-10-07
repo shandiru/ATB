@@ -9,20 +9,25 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0F216B] text-white py-8 md:py-10 relative overflow-hidden">
+    <footer className="bg-[#0F216B] text-white py-8 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left Section */}
         <p className="text-sm text-center md:text-left">
-          © 2024 <span className="font-semibold">ATB Motor Engineers Ltd.</span>{" "}
+          © 2025 <span className="font-semibold">ATB Motor Engineers Ltd.</span>{" "}
           All rights reserved.
         </p>
 
         {/* Middle Section (Contact Info) */}
         <div className="flex flex-col sm:flex-row items-center gap-3 text-sm text-gray-200">
-          <div className="flex items-center gap-2">
+          <a
+            href="tel: 01332 224229"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-[#CCDAFF] transition-colors"
+          >
             <FiPhone className="text-[#CCDAFF]" />
             <span>01332 224229</span>
-          </div>
+          </a>
 
           <div className="hidden sm:block h-4 w-[1px] bg-gray-400 opacity-50" />
 
@@ -40,7 +45,7 @@ const Footer = () => {
         {/* Right Section (Social Media Icons) */}
         <div className="flex items-center gap-4">
           <a
-            href="#"
+            href="https://www.facebook.com/profile.php?id=100054506707364"
             className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
           >
             <FiFacebook className="text-white text-lg hover:scale-110 transition-transform duration-300" />
@@ -58,6 +63,39 @@ const Footer = () => {
             <FiInstagram className="text-white text-lg hover:scale-110 transition-transform duration-300" />
           </a>
         </div>
+      </div>
+
+      {/* Terms & Privacy Links */}
+      <div className="mt-6 text-center text-gray-300 text-sm flex flex-wrap justify-center gap-4">
+        <a
+          href="/terms-conditions"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#CCDAFF] hover:underline"
+        >
+          Terms & Conditions
+        </a>
+        <a
+          href="/privacy-policy"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#CCDAFF] hover:underline"
+        >
+          Privacy Policy
+        </a>
+      </div>
+      <div className="mt-2 text-center font-semibold">
+        <p>
+          Powered by{" "}
+          <a
+            href="https://www.ansely.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:underline"
+          >
+            Ansely
+          </a>
+        </p>
       </div>
 
       {/* Bottom Accent Line */}

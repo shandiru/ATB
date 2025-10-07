@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  FaTools,
-  FaCogs,
-  FaWrench,
-  FaHammer,
-  FaCar,
-} from "react-icons/fa";
+import { FaTools, FaCogs, FaWrench, FaHammer, FaCar } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -45,7 +39,7 @@ const ServicesSection = () => {
       duration: 1200,
       easing: "ease-in-out",
       once: false,
-      mirror: true, // works both scrolling up & down
+      mirror: true,
     });
   }, []);
 
@@ -56,7 +50,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50" id="services">
+    <section className="py-20 bg-gray-50 scroll-m-10" id="services">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Heading */}
         <h4
@@ -89,6 +83,16 @@ const ServicesSection = () => {
               <p className="text-gray-600 text-sm">{service.desc}</p>
             </div>
           ))}
+        </div>
+
+        {/* Learn More Button */}
+        <div className="mt-14 text-center" data-aos="fade-up">
+          <a
+            href="/services"
+            className="inline-block bg-[#1E3A8A] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#152c70] hover:shadow-lg transition-all duration-300"
+          >
+            Learn More
+          </a>
         </div>
       </div>
     </section>

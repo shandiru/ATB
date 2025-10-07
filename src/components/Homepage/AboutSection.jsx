@@ -46,7 +46,7 @@ const AboutSection = () => {
             </p>
 
             <a
-              href="/contact"
+              href="/#contact"
               data-aos="zoom-in"
               data-aos-delay="450"
               className="inline-block bg-[#1E3A8A] hover:bg-[#0F216B] text-white px-8 py-3 rounded-full text-lg font-medium shadow-md hover:shadow-xl transition-all duration-300"
@@ -64,7 +64,7 @@ const AboutSection = () => {
               <img
                 src="/image.png"
                 alt="ATB Motor Engineers"
-                className="rounded-2xl shadow-lg hover:shadow-[0_0_30px_rgba(30,58,138,0.4)] transition-all duration-500 transform group-hover:scale-105"
+                className="rounded-2xl shadow-lg h-100 w-120 hover:shadow-[0_0_30px_rgba(30,58,138,0.4)] transition-all duration-500 transform group-hover:scale-105"
               />
               <div className="absolute inset-0 rounded-2xl bg-[#1E3A8A]/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
             </div>
