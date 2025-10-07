@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FiPhone, FiMail } from "react-icons/fi";
 
 const CallToActionSection = () => {
   useEffect(() => {
@@ -47,16 +48,16 @@ const CallToActionSection = () => {
         >
           <a
             href="tel:01332224229"
-            className="bg-yellow-300 text-[#1E3A8A] px-8 py-3 rounded-full font-semibold text-lg md:text-xl shadow-md hover:shadow-yellow-400/50 hover:scale-105 transition-all duration-300"
+            className="bg-yellow-300 text-[#1E3A8A] px-8 py-3 rounded-full font-semibold text-lg md:text-xl shadow-md hover:shadow-yellow-400/50 hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
           >
-            📞 Call Us: 01332 224229
+            <FiPhone className="text-xl" /> Call Us: 01332 224229
           </a>
 
           <a
             href="mailto:atbmotorengineers@gmail.com"
-            className="border-2 border-yellow-300 text-white px-8 py-3 rounded-full font-semibold text-lg md:text-xl hover:bg-yellow-300 hover:text-[#1E3A8A] hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="border-2 border-yellow-300 text-white px-8 py-3 rounded-full font-semibold text-lg md:text-xl hover:bg-yellow-300 hover:text-[#1E3A8A] hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
           >
-            ✉️ Email Us
+            <FiMail className="text-xl" /> Email Us
           </a>
         </div>
 

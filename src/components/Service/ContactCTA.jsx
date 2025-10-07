@@ -1,4 +1,5 @@
 import React from "react";
+import {FiPhone, FiMail} from "react-icons/fi";
 
 const ContactCTA = () => {
   return (
@@ -15,20 +16,24 @@ const ContactCTA = () => {
         </h6>
 
         {/* Contact Info */}
+
         <div className="flex flex-col md:flex-row justify-center items-center gap-6">
           <a
             href="tel:01332224229"
-            className="text-white text-lg md:text-xl font-semibold hover:text-yellow-300 transition-colors duration-300"
+            className="flex items-center gap-2 text-white text-lg md:text-xl font-semibold hover:text-yellow-300 transition-colors duration-300"
           >
-            📞 01332 224229
+            <FiPhone className="w-5 h-5" />
+            01332 224229
           </a>
           <a
             href="mailto:atbmotorengineers@gmail.com"
-            className="text-white text-lg md:text-xl font-semibold hover:text-yellow-300 transition-colors duration-300"
+            className="flex items-center gap-2 text-white text-lg md:text-xl font-semibold hover:text-yellow-300 transition-colors duration-300"
           >
-            ✉️ atbmotorengineers@gmail.com
+            <FiMail className="w-5 h-5" />
+            atbmotorengineers@gmail.com
           </a>
         </div>
+
 
         {/* Divider line */}
         <div className="mt-10 flex justify-center">

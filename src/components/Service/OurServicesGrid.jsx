@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCar, FaCogs, FaTools, FaWrench, FaBolt, FaCertificate } from "react-icons/fa";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const services = [
   {
@@ -103,13 +104,13 @@ const OurServicesGrid = () => {
               </p>
 
               {/* Feature List */}
-              <ul className="space-y-2 text-gray-700 text-sm">
+              <ul>
                 {service.features.map((feature, i) => (
                   <li
                     key={i}
                     className="flex items-start gap-2 text-gray-700 hover:text-[#1E3A8A] transition"
                   >
-                    <span className="text-[#1E3A8A] mt-[2px]">✔</span>
+                    <IoMdCheckmarkCircleOutline className="text-[#1E3A8A] mt-[2px] w-4 h-4 flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
