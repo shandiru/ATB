@@ -12,7 +12,7 @@ const HeroVideoSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[100vh] overflow-hidden" id="home">
+    <header className="relative bg-[#1f2a44] text-white h-[100vh]">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -25,42 +25,53 @@ const HeroVideoSection = () => {
         Your browser does not support the video tag.
       </video>
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-[#1f2a44]/80" />
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col items-center mt-25 justify-center text-center h-full px-6 md:px-10">
-        <div className="flex gap-30 mt-15 max-w-4xl mx-auto">
-          <h3
+      <div className="relative py-28 px-8 md:px-16 xl:px-24">
+        <div className="max-w-4xl mx-auto text-center md:text-left">
+          {/* Heading */}
+          <h1
+            className="text-4xl font-bold leading-tight mb-6 mt-25"
             data-aos="fade-up"
-            className="text-white text-left font-semibold text-2xl max-w-xl mx-auto leading-snug md:leading-snug tracking-tight drop-shadow-lg"
           >
-            We provide a complete range of{" "}
-            <span className="text-[#1E3A8A] font-bold">high quality</span>, reliable motor
-            engineering services in{" "}
-            <span className="text-[#1E3A8A] font-bold">Derby</span> and the surrounding areas
-          </h3>
+            We provide a complete range of high quality, reliable motor
+            engineering services in Derby and the surrounding areas
+          </h1>
 
+          {/* Description */}
           <p
-            data-aos="fade-up"
-            data-aos-delay="300"
-            className="text-gray-200 text-sm text-left sm:text-base md:text-lg max-w-xl leading-relaxed"
+            className="text-gray-200 mb-10 max-w-2xl text-lg"
+            data-aos="fade-right"
+            data-aos-delay="200"
           >
-            Trusted professionals delivering precision, reliability, and unmatched
-            service quality for your vehicle.
+            Trusted professionals delivering precision, reliability, and
+            unmatched service quality for your vehicle.
           </p>
-        </div>
 
-        <div data-aos="zoom-in" data-aos-delay="600" className="mt-15">
-          <a
-            href="/#contact"
-            className="bg-[#1E3A8A] hover:bg-[#0F216B] text-white px-6 py-2.5 rounded-full text-base sm:text-lg font-medium transition-all duration-300 shadow-md hover:shadow-xl"
+          {/* Buttons */}
+          <div
+            className="flex flex-wrap gap-5 justify-center md:justify-start"
+            data-aos="zoom-in"
+            data-aos-delay="400"
           >
-            Get in Touch
-          </a>
+            <a href="/#contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-lg font-semibold text-base sm:text-lg transition duration-300 shadow-md hover:shadow-lg">
+                Book an Appointment
+              </button>
+            </a>
+
+            <a
+              href="tel:01332224229"
+              className="bg-white text-gray-900 hover:bg-gray-100 px-7 py-3 rounded-lg font-semibold text-base sm:text-lg transition duration-300 shadow-md hover:shadow-lg"
+            >
+              Call Us
+            </a>
+          </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 
