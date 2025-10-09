@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <Hero />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <AboutSection />
       <Whychoose />
       <ServicesSection />

@@ -118,10 +118,11 @@ const TestimonialsSection = () => {
           className="pb-12"
         >
           {testimonials.map((t, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="py-2">
               <div
                 data-aos={index % 2 === 0 ? "fade-up" : "fade-down"}
-                className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between h-[370px] hover:shadow-[0_0_25px_rgba(30,58,138,0.25)] transition-all duration-500 hover:-translate-y-2"
+                className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between 
+    min-h-[380px] hover:shadow-[0_0_25px_rgba(30,58,138,0.25)] transition-all duration-500 hover:-translate-y-2"
               >
                 <div>
                   <div className="flex items-center gap-4 mb-4">
@@ -148,9 +149,7 @@ const TestimonialsSection = () => {
                 <div className="mt-4">
                   <hr className="border-gray-200 my-3" />
                   <p className="text-sm text-gray-500 font-medium">
-                    <span className="text-[#1E3A8A] font-semibold">
-                      Service:
-                    </span>{" "}
+                    <span className="text-[#1E3A8A] font-semibold">Service:</span>{" "}
                     {t.service}
                   </p>
                 </div>
