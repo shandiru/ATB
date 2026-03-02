@@ -1,14 +1,20 @@
-import React, { useEffect } from "react";
-import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
+"use client";
+import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const testimonials = [
-  {
+// Content object
+const testimonialsContent = {
+  headerSmall: "Testimonials",
+  headerBig: "What Our Customers Say",
+  description:
+    "Our mission is to deliver precision, reliability, and workmanship you can trust. Here’s what our customers say about their experience with ATB Motor Engineers.",
+  buttonText: "Speak to Our Team",
+};
+
+// Testimonials data (can later come from API)
+const testimonialsData = [
+    {
     initials: "JM",
     name: "James Mitchell",
     location: "Derby • December 2024",
@@ -75,106 +81,114 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
+  const [paused, setPaused] = useState(false);
+
   useEffect(() => {
-    AOS.init({
-      duration: 900,
-      easing: "ease-in-out",
-      once: false,
-      mirror: true,
-    });
+    AOS.init({ duration: 1000, easing: "ease-out-cubic", once: false });
   }, []);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      window.scrollTo({ top: section.offsetTop - 80, behavior: "smooth" });
+    }
+  };
 
   return (
     <section
-      className="relative py-20 bg-gray-50 overflow-hidden scroll-m-10"
       id="testimonials"
+      className="relative overflow-hidden bg-white text-black py-24 px-6 md:px-12"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
-        <h2
-          data-aos="fade-up"
-          className="text-3xl md:text-4xl font-bold text-center text-[#1E3A8A] mb-12"
-        >
-          What Our Customers Say
-        </h2>
+      {/* Header */}
+      <div
+        className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center mb-14"
+        data-aos="fade-up"
+      >
+        <div data-aos="fade-right">
+          <p className="text-[#FFDF20] uppercase tracking-[5px] text-sm font-semibold mb-2">
+            {testimonialsContent.headerSmall}
+          </p>
+          <h2 className="text-4xl md:text-5xl font-extrabold leading-[1.2] text-[#1E3A8A]">
+            {testimonialsContent.headerBig.split(" ")[0]}{" "}
+            <span className="text-[#FFDF20]">
+              {testimonialsContent.headerBig.split(" ")[2]}
+            </span>{" "}
+            {testimonialsContent.headerBig.split(" ").slice(3).join(" ")}
+          </h2>
+          <p className="text-[#0F216B] text-base mt-4 max-w-lg">
+            {testimonialsContent.description}
+          </p>
+        </div>
 
-        {/* Swiper Slider */}
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          navigation={{
-            nextEl: ".swiper-next",
-            prevEl: ".swiper-prev",
-          }}
-          autoplay={{
-            delay: 6000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          spaceBetween={30}
-          slidesPerView={1}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          className="pb-12"
-        >
-          {testimonials.map((t, index) => (
-            <SwiperSlide key={index} className="py-2">
-              <div
-                data-aos={index % 2 === 0 ? "fade-up" : "fade-down"}
-                className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between 
-    min-h-[380px] hover:shadow-[0_0_25px_rgba(30,58,138,0.25)] transition-all duration-500 hover:-translate-y-2"
-              >
-                <div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#1E3A8A] text-white font-semibold text-lg">
-                      {t.initials}
-                    </div>
-                    <div>
-                      <h6 className="font-semibold text-gray-900">{t.name}</h6>
-                      <p className="text-sm text-gray-500">{t.location}</p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-1 mb-3 text-[#FACC15]">
-                    {[...Array(5)].map((_, i) => (
-                      <FaStar key={i} />
-                    ))}
-                  </div>
-
-                  <p className="text-gray-700 text-sm md:text-base leading-relaxed line-clamp-5">
-                    {t.review}
-                  </p>
-                </div>
-
-                <div className="mt-4">
-                  <hr className="border-gray-200 my-3" />
-                  <p className="text-sm text-gray-500 font-medium">
-                    <span className="text-[#1E3A8A] font-semibold">Service:</span>{" "}
-                    {t.service}
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-        {/* Navigation Arrows with React Icons */}
+        {/* Scroll Button */}
         <button
-          className="swiper-prev absolute top-1/2 -left-4 transform -translate-y-1/2 bg-[#1E3A8A]/90 hover:bg-[#0F216B] text-white p-3 md:p-4 rounded-full shadow-lg transition z-10"
-          aria-label="Previous"
+          onClick={() => scrollToSection("contact")}
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          className="mt-8 md:mt-0 flex items-center gap-2 bg-[#FFDF20] hover:bg-[#1E3A8A] text-[#0F216B] font-semibold uppercase px-8 py-3 rounded-md transition-all duration-300"
         >
-          <FaChevronLeft className="text-lg" />
-        </button>
-
-        <button
-          className="swiper-next absolute top-1/2 -right-4 transform -translate-y-1/2 bg-[#1E3A8A]/90 hover:bg-[#0F216B] text-white p-3 md:p-4 rounded-full shadow-lg transition z-10"
-          aria-label="Next"
-        >
-          <FaChevronRight className="text-lg" />
+          {testimonialsContent.buttonText}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-4 h-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
         </button>
       </div>
+
+      {/* Testimonials Rows */}
+      {["left", "right"].map((direction, idx) => (
+        <div
+          key={idx}
+          data-aos="fade-up"
+          data-aos-delay={200 + idx * 200}
+          className={`relative z-10 flex gap-8 mt-${idx === 0 ? "0" : "10"} animate-scroll-${
+            direction
+          }`}
+          style={{ animationPlayState: paused ? "paused" : "running" }}
+        >
+          {[...testimonialsData, ...testimonialsData].map((item, i) => (
+            <div
+              key={`${direction}-${i}`}
+              className="bg-[#1E3A8A]/10 border border-[#0F216B] rounded-2xl p-6 flex flex-col justify-between shrink-0 hover:border-[#FFDF20] transition-all duration-300 w-[340px] h-80"
+            >
+              <p className="italic text-[#0F216B] text-[15px] leading-relaxed line-clamp-8 overflow-hidden">
+                “{item.review}”
+              </p>
+              <div className="flex items-center gap-3 mt-6">
+                <div className="w-10 h-10 flex items-center justify-center bg-[#FFDF20] text-[#0F216B] font-semibold rounded-full">
+                  {item.initials}
+                </div>
+                <div>
+                  <h4 className="text-[#1E3A8A] font-semibold text-sm">{item.name}</h4>
+                  <p className="text-[#0F216B] text-xs">{item.location}</p>
+                  <p className="text-[#1E3A8A] text-xs font-semibold">{item.service}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+
+      {/* Animation Keyframes */}
+      <style>{`
+        @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes scroll-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+        .animate-scroll-left { animation: scroll-left 45s linear infinite; display: flex; width: max-content; }
+        .animate-scroll-right { animation: scroll-right 50s linear infinite; display: flex; width: max-content; }
+      `}</style>
     </section>
   );
 };
 
 export default TestimonialsSection;
+
+
+
