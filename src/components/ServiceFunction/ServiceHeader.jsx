@@ -38,7 +38,7 @@ const ServiceHeader = () => {
               href="/#contact"
               data-aos="zoom-in"
               data-aos-delay="450"
-              className="inline-block bg-[#1E3A8A] hover:bg-[#0F216B] text-white px-8 py-3 rounded-full text-lg font-medium shadow-md hover:shadow-xl transition-all duration-300"
+                className="inline-block bg-[#FFDF20] hover:bg-yellow-400 text-[#0F216B] px-8 py-3 rounded-full text-lg font-medium shadow-md hover:shadow-xl transition-all duration-300"
             >
               Book Service
             </a>
