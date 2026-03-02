@@ -2,7 +2,7 @@ import React from 'react'
 import ServiceHeader from '../components/ServiceFunction/ServiceHeader'
 import ServiceAbout from '../components/ServiceFunction/ServiceAbout'
 import ServiceStatsSection from '../components/ServiceFunction/ServiceService'
-import ServiceEnd from '../components/ServiceFunction/ServiceEnd'
+import Cta from "../components/common/cta"
 
 const Service = () => {
   return (
@@ -10,7 +10,7 @@ const Service = () => {
       <ServiceHeader />
       <ServiceAbout />
       <ServiceStatsSection />
-      <ServiceEnd />
+      <Cta />
     </div>
   )
 }

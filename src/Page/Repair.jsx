@@ -2,7 +2,7 @@ import React from 'react'
 import RepairHeader from '../components/Repair.jsx/RepairHeader'
 import RepairAbout from '../components/Repair.jsx/RepairAbout'
 import RepairStatsSection from '../components/Repair.jsx/RepairService'
-import RepairEnd from '../components/Repair.jsx/RepairEnd'
+import Cta from "../components/common/cta"
 
 const Repair = () => {
   return (
@@ -10,7 +10,7 @@ const Repair = () => {
       <RepairHeader />
       <RepairAbout />
       <RepairStatsSection />
-      <RepairEnd />
+      <Cta />
     </div>
   )
 }
