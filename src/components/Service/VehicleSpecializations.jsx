@@ -1,26 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 const vehicleBrands = [
-  "BMW",
-  "Mercedes-Benz",
-  "Audi",
-  "Volkswagen",
-  "Ford",
-  "Vauxhall",
-  "Toyota",
-  "Honda",
-  "Nissan",
-  "Peugeot",
-  "Renault",
-  "Citroen",
-  "Land Rover",
-  "Jaguar",
-  "Mini",
-  "Volvo",
-  "Mazda",
-  "Hyundai",
-  "Kia",
-  "Subaru",
+  "BMW","Mercedes-Benz","Audi","Volkswagen","Ford","Vauxhall",
+  "Toyota","Honda","Nissan","Peugeot","Renault","Citroen",
+  "Land Rover","Jaguar","Mini","Volvo","Mazda","Hyundai","Kia","Subaru",
 ];
 
 export default function VehicleSpecializations() {
@@ -44,7 +27,6 @@ export default function VehicleSpecializations() {
     };
   }, []);
 
-  // Duplicate brands for infinite scroll
   const allBrands = [...vehicleBrands, ...vehicleBrands];
 
   return (
@@ -73,7 +55,8 @@ export default function VehicleSpecializations() {
             {allBrands.map((brand, index) => (
               <span
                 key={index}
-                className="px-5 py-2 border border-[#1E3A8A] text-[#1E3A8A] font-medium text-sm rounded-full cursor-default hover:bg-[#1E3A8A] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md whitespace-nowrap"
+                className="px-5 py-2 border border-[#1E3A8A] text-[#1E3A8A] font-medium text-sm rounded-full cursor-default 
+                           hover:bg-[#FFDF20] hover:text-[#0F216B] transition-all duration-300 shadow-sm hover:shadow-md whitespace-nowrap"
               >
                 {brand}
               </span>
@@ -83,12 +66,8 @@ export default function VehicleSpecializations() {
 
         <style jsx>{`
           @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
           }
 
           .animate-scroll {
@@ -99,17 +78,8 @@ export default function VehicleSpecializations() {
             animation-play-state: paused;
           }
 
-          @media (max-width: 640px) {
-            .animate-scroll {
-              animation-duration: 20s;
-            }
-          }
-
-          @media (min-width: 1024px) {
-            .animate-scroll {
-              animation-duration: 45s;
-            }
-          }
+          @media (max-width: 640px) { .animate-scroll { animation-duration: 20s; } }
+          @media (min-width: 1024px) { .animate-scroll { animation-duration: 45s; } }
         `}</style>
       </div>
     </section>

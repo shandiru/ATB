@@ -1,5 +1,5 @@
 import React from "react";
-import {FiPhone, FiMail} from "react-icons/fi";
+import { FiPhone, FiMail } from "react-icons/fi";
 
 const ContactCTA = () => {
   return (
@@ -11,33 +11,31 @@ const ContactCTA = () => {
         </h4>
 
         {/* Subheading */}
-        <h6 className="text-lg md:text-xl text-gray-200 mb-8">
+        <h6 className="text-lg md:text-xl text-[#FFDF20] mb-8">
           Contact us today for a free consultation and quote.
         </h6>
 
         {/* Contact Info */}
-
         <div className="flex flex-col md:flex-row justify-center items-center gap-6">
           <a
             href="tel:01332224229"
-            className="flex items-center gap-2 text-white text-lg md:text-xl font-semibold hover:text-yellow-300 transition-colors duration-300"
+            className="flex items-center gap-2 text-white text-lg md:text-xl font-semibold hover:text-[#FFDF20] transition-colors duration-300"
           >
             <FiPhone className="w-5 h-5" />
             01332 224229
           </a>
           <a
             href="mailto:atbmotorengineers@gmail.com"
-            className="flex items-center gap-2 text-white text-lg md:text-xl font-semibold hover:text-yellow-300 transition-colors duration-300"
+            className="flex items-center gap-2 text-white text-lg md:text-xl font-semibold hover:text-[#FFDF20] transition-colors duration-300"
           >
             <FiMail className="w-5 h-5" />
             atbmotorengineers@gmail.com
           </a>
         </div>
 
-
         {/* Divider line */}
         <div className="mt-10 flex justify-center">
-          <div className="w-20 h-[2px] bg-white opacity-50"></div>
+          <div className="w-20 h-[2px] bg-[#FFDF20]"></div>
         </div>
       </div>
     </section>
