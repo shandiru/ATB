@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaCalendarAlt, FaCar, FaBroom, FaFileAlt } from "react-icons/fa"; // import icons
+import { FaCalendarAlt, FaCar, FaBroom, FaFileAlt } from "react-icons/fa";
 
 const stats = [
   {
@@ -49,12 +49,14 @@ const MotStatsSection = () => {
               className="bg-white rounded-2xl shadow-md hover:shadow-[0_0_25px_rgba(30,58,138,0.3)] p-8 transition-all duration-500 transform hover:-translate-y-2"
             >
               {stat.icon}
-              <h6 className="text-gray-700 font-medium text-sm mt-5 md:text-base">
+              <h6 className="text-[#0F216B] font-semibold text-base mt-5 relative inline-block">
                 {stat.label}
+                {/* Yellow underline */}
+                <span className="block w-12 h-1 bg-[#FFDF20] rounded-full mt-2 mx-auto"></span>
               </h6>
-              <h6 className="text-gray-700 font-medium text-sm mt-3 md:text-base">
+              <p className="text-gray-700 text-sm md:text-base mt-3">
                 {stat.desc}
-              </h6>
+              </p>
             </div>
           ))}
         </div>
