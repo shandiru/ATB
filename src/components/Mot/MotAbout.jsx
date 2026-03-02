@@ -49,14 +49,18 @@ const MotAbout = () => {
           <div
             key={idx}
             data-aos="fade-up"
-            className="bg-gray-200 p-8 rounded-lg shadow-md hover:shadow-[0_0_25px_rgba(30,58,128,0.3)] transform hover:scale-105 transition-all duration-500"
+            className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-[0_0_25px_rgba(255,223,32,0.3)] transform hover:scale-105 transition-all duration-500"
           >
-            <h3 className="text-xl md:text-2xl font-bold mb-6">{section.title}</h3>
+            <h3 className="text-[#0F216B] text-xl md:text-2xl font-bold mb-6">
+              {section.title}
+            </h3>
             <ul className="space-y-4">
               {section.items.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <IoMdCheckmarkCircleOutline className="text-[#1E3A8A] mt-1 flex-shrink-0 text-lg" />
-                  <span className="text-sm md:text-base">{item}</span>
+                  <IoMdCheckmarkCircleOutline 
+                    className="text-[#FFDF20] mt-1 flex-shrink-0 text-lg transition-all duration-300 hover:drop-shadow-[0_0_6px_#FFDF20]" 
+                  />
+                  <span className="text-gray-700 text-sm md:text-base">{item}</span>
                 </li>
               ))}
             </ul>
