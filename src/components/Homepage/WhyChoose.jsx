@@ -29,7 +29,7 @@ const AboutSection = () => {
           {/* LEFT IMAGE */}
           <div>
             <img
-              src="about.jpeg"
+              src="whoare.jpg"
               alt="About us"
               className="w-full max-w-[580px] rounded-3xl object-cover shadow-xl"
             />

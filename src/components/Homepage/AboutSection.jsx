@@ -62,7 +62,7 @@ const AboutSection = () => {
           >
             <div className="relative group">
               <img
-                src="/car.png"
+                src="/about.jpg"
                 alt="ATB Motor Engineers"
                 className="rounded-2xl shadow-lg h-110 w-120 hover:shadow-[0_0_30px_rgba(30,58,138,0.4)] transition-all duration-500 transform group-hover:scale-105"
               />

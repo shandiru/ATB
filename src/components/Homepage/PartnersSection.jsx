@@ -22,12 +22,12 @@ export default function PartnersSection() {
   }, []);
 
   const logos = [
-    { url: "/t1.webp", width: 200 },
-    { url: "/t2.webp", width: 200 },
-    { url: "/t3.webp", width: 200 },
-    { url: "/t4.webp", width: 200 },
-    { url: "/t5.webp", width: 200 },
-    { url: "/t6.webp", width: 200 },
+    { url: "/image.png", width: 200 },
+    { url: "/image.png", width: 200 },
+    { url: "/image.png", width: 200 },
+    { url: "/image.png", width: 200 },
+    { url: "/image.png", width: 200 },
+    { url: "/image.png", width: 200 },
   ];
 
   const allLogos = [...logos, ...logos]; // duplicate for seamless scroll
