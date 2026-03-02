@@ -16,7 +16,7 @@ const Footer = () => {
               href="/terms-conditions"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#CCDAFF] hover:underline"
+              className="text-[#CCDAFF] hover:text-[#FFDF20] hover:underline"
             >
               Terms & Conditions
             </a>
@@ -24,7 +24,7 @@ const Footer = () => {
               href="/privacy-policy"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#CCDAFF] hover:underline"
+              className="text-[#CCDAFF] hover:text-[#FFDF20] hover:underline"
             >
               Privacy Policy
             </a>
@@ -35,9 +35,9 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 text-sm text-gray-200">
           <a
             href="tel:01332224229"
-            className="flex items-center gap-2 hover:text-[#CCDAFF] transition-colors"
+            className="flex items-center gap-2 hover:text-[#FFDF20] transition-colors"
           >
-            <FiPhone className="text-[#CCDAFF]" />
+            <FiPhone className="text-[#1E3A8A]" />
             01332 224229
           </a>
 
@@ -45,9 +45,9 @@ const Footer = () => {
 
           <a
             href="mailto:atbmotorengineers@gmail.com"
-            className="flex items-center gap-2 hover:text-[#CCDAFF] transition-colors"
+            className="flex items-center gap-2 hover:text-[#FFDF20] transition-colors"
           >
-            <FiMail className="text-[#CCDAFF]" />
+            <FiMail className="text-[#1E3A8A]" />
             atbmotorengineers@gmail.com
           </a>
         </div>
@@ -58,29 +58,29 @@ const Footer = () => {
             href="https://www.facebook.com/profile.php?id=100054506707364"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+            className="p-2 rounded-full bg-white/10 hover:bg-[#1E3A8A]/20 transition-all duration-300"
           >
-            <FiFacebook className="text-white text-lg hover:scale-110 transition-transform duration-300" />
+            <FiFacebook className="text-white text-lg hover:text-[#FFDF20] hover:scale-110 transition-transform duration-300" />
           </a>
           
           <a
             href="#"
-            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+            className="p-2 rounded-full bg-white/10 hover:bg-[#1E3A8A]/20 transition-all duration-300"
           >
-            <FiInstagram className="text-white text-lg hover:scale-110 transition-transform duration-300" />
+            <FiInstagram className="text-white text-lg hover:text-[#FFDF20] hover:scale-110 transition-transform duration-300" />
           </a>
         </div>
       </div>
 
       {/* Powered By */}
-      <div className="mt- text-center text-gray-300 text-sm md:text-base">
+      <div className="mt-4 text-center text-gray-300 text-sm md:text-base">
         <p>
           Powered by{" "}
           <a
             href="https://www.ansely.co.uk/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:underline font-semibold"
+            className="text-white hover:text-[#FFDF20] hover:underline font-semibold"
           >
             Ansely
           </a>
@@ -88,7 +88,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Accent Line */}
-      <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#1E3A8A] via-[#00B4D8] to-[#1E3A8A]" />
+      <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#1E3A8A] via-[#FFDF20] to-[#1E3A8A]" />
     </footer>
   );
 };

@@ -12,7 +12,7 @@ const HeroVideoSection = () => {
   }, []);
 
   return (
-    <header className="relative bg-[#1f2a44] text-white h-[100vh]">
+    <header className="relative bg-[#1E3A8A] text-white h-[100vh]">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -26,7 +26,7 @@ const HeroVideoSection = () => {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#1f2a44]/80" />
+      <div className="absolute inset-0 bg-[#1E3A8A]/80" />
 
       {/* Content */}
       <div className="relative py-28 px-8 md:px-16 xl:px-24">
@@ -57,14 +57,14 @@ const HeroVideoSection = () => {
             data-aos-delay="400"
           >
             <a href="/#contact">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-lg font-semibold text-base sm:text-lg transition duration-300 shadow-md hover:shadow-lg">
+              <button className="bg-[#1E3A8A] hover:bg-[#0F216B] text-white px-7 py-3 rounded-lg font-semibold text-base sm:text-lg transition duration-300 shadow-md hover:shadow-lg">
                 Book an Appointment
               </button>
             </a>
 
             <a
               href="tel:01332224229"
-              className="bg-white text-gray-900 hover:bg-gray-100 px-7 py-3 rounded-lg font-semibold text-base sm:text-lg transition duration-300 shadow-md hover:shadow-lg"
+              className="bg-[#FFDF20] text-[#1E3A8A] hover:bg-yellow-300 px-7 py-3 rounded-lg font-semibold text-base sm:text-lg transition duration-300 shadow-md hover:shadow-lg"
             >
               Call Us
             </a>

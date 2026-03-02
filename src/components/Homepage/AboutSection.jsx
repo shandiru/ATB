@@ -7,8 +7,8 @@ const AboutSection = () => {
     AOS.init({
       duration: 1000,       // Animation speed
       easing: "ease-in-out", // Smooth easing
-      once: false,           // ✅ Animation will trigger both on scroll down & up
-      mirror: true,          // ✅ Reverses animation when scrolling up
+      once: false,           // Animation triggers on scroll down & up
+      mirror: true,          // Reverses animation when scrolling up
       offset: 120,           // Triggers animation slightly before visible
     });
   }, []);
