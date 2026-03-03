@@ -30,6 +30,7 @@ export default function PartnersSection() {
     { url: "/Vauxhall-Logo-removebg-preview.png", width: 150 },
     { url: "/Toyota-removebg-preview.png", width: 250 },
      { url: "/Honda.svg-removebg-preview.png", width: 100 },
+       { url: "/Peugeot-logo-removebg-preview.png", width: 100 },
 
   ];
 
