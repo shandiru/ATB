@@ -1,45 +1,73 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { FiPhone, FiMail } from "react-icons/fi";
 
-const ContactCTA = () => {
+const CallToActionSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 900,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+    });
+  }, []);
+
   return (
-    <section className="bg-[#1E3A8A] text-white py-16 px-6 md:px-12 text-center">
-      <div className="max-w-4xl mx-auto">
+    <section
+      id="contact"
+      className="relative bg-[#1E3A8A] text-white py-20 md:py-24 overflow-hidden scroll-m-24"
+    >
+      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 text-center">
+        
         {/* Heading */}
-        <h4 className="text-3xl md:text-4xl font-bold mb-4">
-          Need Professional Motor Engineering Services?
+        <h4
+          data-aos="fade-up"
+          className="text-3xl md:text-5xl font-extrabold mb-5"
+        >
+         Need Professional Motor Engineering Services?
         </h4>
 
-        {/* Subheading */}
-        <h6 className="text-lg md:text-xl text-[#FFDF20] mb-8">
+        {/* Paragraph */}
+        <p
+          data-aos="fade-up"
+          data-aos-delay="150"
+          className="text-lg md:text-xl font-medium text-gray-100 max-w-3xl mx-auto leading-relaxed mb-10"
+        >
           Contact us today for a free consultation and quote.
-        </h6>
+        </p>
 
-        {/* Contact Info */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+        {/* Buttons */}
+        <div
+          data-aos="zoom-in-up"
+          className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10"
+        >
           <a
             href="tel:01332224229"
-            className="flex items-center gap-2 text-white text-lg md:text-xl font-semibold hover:text-[#FFDF20] transition-colors duration-300"
+            className="bg-[#FFDF20] text-[#1E3A8A] px-8 py-3 rounded-full font-semibold text-lg md:text-xl shadow-md hover:shadow-yellow-400/50 hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
           >
-            <FiPhone className="w-5 h-5" />
-            01332 224229
+            <FiPhone className="text-xl" />
+            Call Us: 01332 224229
           </a>
+
           <a
             href="mailto:atbmotorengineers@gmail.com"
-            className="flex items-center gap-2 text-white text-lg md:text-xl font-semibold hover:text-[#FFDF20] transition-colors duration-300"
+            className="border-2 border-[#FFDF20] text-white px-8 py-3 rounded-full font-semibold text-lg md:text-xl hover:bg-[#FFDF20] hover:text-[#1E3A8A] hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
           >
-            <FiMail className="w-5 h-5" />
-            atbmotorengineers@gmail.com
+            <FiMail className="text-xl" />
+            Email Us
           </a>
         </div>
 
-        {/* Divider line */}
-        <div className="mt-10 flex justify-center">
-          <div className="w-20 h-[2px] bg-[#FFDF20]"></div>
-        </div>
+        {/* Decorative Line */}
+        <div
+          data-aos="fade-up"
+          data-aos-delay="300"
+          className="mt-12 w-24 h-[3px] bg-[#FFDF20] mx-auto rounded-full"
+        ></div>
       </div>
     </section>
   );
 };
 
-export default ContactCTA;
+export default CallToActionSection;
