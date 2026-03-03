@@ -3,7 +3,7 @@ import OurServicesGrid from "../components/Service/OurServicesGrid"
 import VehicleSpecializations from "../components/Service/VehicleSpecializations"
 import ContactCTA from "../components/Service/ContactCTA"
 import ServicesSection from "../components/Service/ServiceSection";
-
+import CallToActionSection from "../components/common/cta"
 function Service() {
   return (
     <>
@@ -11,7 +11,7 @@ function Service() {
       <ServicesSection />
       {/* <OurServicesGrid /> */}
       <VehicleSpecializations />
-      <ContactCTA />
+      <CallToActionSection />
     </>
   );
 }
