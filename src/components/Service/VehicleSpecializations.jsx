@@ -1,9 +1,26 @@
 import React, { useState, useEffect } from "react";
 
 const vehicleBrands = [
-  "BMW","Mercedes-Benz","Audi","Volkswagen","Ford","Vauxhall",
-  "Toyota","Honda","Nissan","Peugeot","Renault","Citroen",
-  "Land Rover","Jaguar","Mini","Volvo","Mazda","Hyundai","Kia","Subaru",
+  { name: "BMW", slug: "bmw" },
+  { name: "Mercedes-Benz", slug: "mercedes" },
+  { name: "Audi", slug: "audi" },
+  { name: "Volkswagen", slug: "volkswagen" },
+  { name: "Ford", slug: "ford" },
+  { name: "Vauxhall", slug: "vauxhall" },
+  { name: "Toyota", slug: "toyota" },
+  { name: "Honda", slug: "honda" },
+  { name: "Nissan", slug: "nissan" },
+  { name: "Peugeot", slug: "peugeot" },
+  { name: "Renault", slug: "renault" },
+  { name: "Citroen", slug: "citroen" },
+  { name: "Land Rover", slug: "landrover" },
+  { name: "Jaguar", slug: "jaguar" },
+  { name: "Mini", slug: "mini" },
+  { name: "Volvo", slug: "volvo" },
+  { name: "Mazda", slug: "mazda" },
+  { name: "Hyundai", slug: "hyundai" },
+  { name: "Kia", slug: "kia" },
+  { name: "Subaru", slug: "subaru" },
 ];
 
 export default function VehicleSpecializations() {
@@ -27,6 +44,7 @@ export default function VehicleSpecializations() {
     };
   }, []);
 
+  // Duplicate the list for the infinite scroll effect
   const allBrands = [...vehicleBrands, ...vehicleBrands];
 
   return (
@@ -37,29 +55,33 @@ export default function VehicleSpecializations() {
       }`}
     >
       <div className="max-w-7xl mx-auto text-center">
-        {/* Heading */}
         <h4 className="text-3xl md:text-4xl font-bold text-[#1E3A8A] mb-4">
           Vehicle Specializations
         </h4>
 
-        {/* Description */}
         <p className="text-gray-600 max-w-2xl mx-auto mb-10">
           We proudly service a wide range of vehicle makes and models, combining
-          modern diagnostic technology with years of expertise across both European
-          and Asian manufacturers.
+          modern diagnostic technology with years of expertise.
         </p>
 
-        {/* Infinite Scroll Text Chips */}
-        <div className="overflow-hidden">
-          <div className="flex animate-scroll hover:pause gap-4">
+        {/* Infinite Scroll Container */}
+        <div className="overflow-hidden relative">
+          <div className="flex animate-scroll hover:pause gap-6 py-4">
             {allBrands.map((brand, index) => (
-              <span
+              <div
                 key={index}
-                className="px-5 py-2 border border-[#1E3A8A] text-[#1E3A8A] font-medium text-sm rounded-full cursor-default 
-                           hover:bg-[#FFDF20] hover:text-[#0F216B] transition-all duration-300 shadow-sm hover:shadow-md whitespace-nowrap"
+                className="flex items-center gap-3 px-6 py-3 border border-[#1E3A8A]/20 bg-gray-50 text-[#1E3A8A] font-semibold text-sm rounded-xl cursor-default 
+                           hover:bg-[#FFDF20] hover:text-[#0F216B] hover:border-[#FFDF20] transition-all duration-300 shadow-sm hover:shadow-lg whitespace-nowrap group"
               >
-                {brand}
-              </span>
+                {/* Logo Image */}
+                <img
+                  src={`https://cdn.simpleicons.org/${brand.slug}/1E3A8A`}
+                  alt={`${brand.name} logo`}
+                  className="w-6 h-6 object-contain group-hover:filter group-hover:brightness-0 transition-all duration-300"
+                  onError={(e) => (e.target.style.display = 'none')} // Hide if logo fails to load
+                />
+                <span>{brand.name}</span>
+              </div>
             ))}
           </div>
         </div>
@@ -71,15 +93,18 @@ export default function VehicleSpecializations() {
           }
 
           .animate-scroll {
-            animation: scroll 35s linear infinite;
+            display: flex;
+            width: max-content;
+            animation: scroll 40s linear infinite;
           }
 
           .hover\\:pause:hover {
             animation-play-state: paused;
           }
 
-          @media (max-width: 640px) { .animate-scroll { animation-duration: 20s; } }
-          @media (min-width: 1024px) { .animate-scroll { animation-duration: 45s; } }
+          @media (max-width: 640px) { 
+            .animate-scroll { animation-duration: 25s; } 
+          }
         `}</style>
       </div>
     </section>
