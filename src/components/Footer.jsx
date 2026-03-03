@@ -1,5 +1,5 @@
 import React from "react";
-import { FiFacebook, FiInstagram, FiPhone, FiMail } from "react-icons/fi";
+import { FiFacebook, FiPhone, FiMail } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -63,12 +63,7 @@ const Footer = () => {
             <FiFacebook className="text-white text-lg hover:text-[#FFDF20] hover:scale-110 transition-transform duration-300" />
           </a>
           
-          <a
-            href="#"
-            className="p-2 rounded-full bg-white/10 hover:bg-[#1E3A8A]/20 transition-all duration-300"
-          >
-            <FiInstagram className="text-white text-lg hover:text-[#FFDF20] hover:scale-110 transition-transform duration-300" />
-          </a>
+          
         </div>
       </div>
 

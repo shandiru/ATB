@@ -127,7 +127,7 @@ const TestimonialsSection = () => {
           onClick={() => scrollToSection("contact")}
           data-aos="zoom-in"
           data-aos-delay="200"
-          className="mt-8 md:mt-0 flex items-center gap-2 bg-[#FFDF20] hover:bg-[#1E3A8A] text-[#0F216B] font-semibold uppercase px-8 py-3 rounded-md transition-all duration-300"
+          className="mt-8 md:mt-0 flex items-center gap-2 bg-[#FFDF20] hover:bg-[#1E3A8A] text-[#0F216B] hover:text-[#FFDF20] font-semibold uppercase px-8 py-3 rounded-md transition-all duration-300"
         >
           {testimonialsContent.buttonText}
           <svg

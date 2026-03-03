@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom"; 
 
 const services = [ 
-  { id: "1", title: "MOT", imgSrc: "/back.jpg", link: "/services/mot", serial: "01" }, 
-  { id: "2", title: "Service", imgSrc: "/back.jpg", link: "/services/service", serial: "02" }, 
-  { id: "3", title: "Chain/Belts (Wet Belt Specialist)", imgSrc: "/back.jpg", link: "/services/chain/belts", serial: "03" }, 
-  { id: "4", title: "Welding", imgSrc: "/back.jpg", link: "/services/welding", serial: "04" }, 
-  { id: "5", title: "Mechanical Repairs", imgSrc: "/back.jpg", link: "/services/mechanical-repair", serial: "05" }, 
+  { id: "1", title: "MOT", imgSrc: "/mot.png", link: "/services/mot", serial: "01" }, 
+  { id: "2", title: "Service", imgSrc: "/service.png", link: "/services/service", serial: "02" }, 
+  { id: "3", title: "Chain/Belts (Wet Belt Specialist)", imgSrc: "/belts.png", link: "/services/chain-belts", serial: "03" }, 
+  { id: "4", title: "Welding", imgSrc: "/welding.png", link: "/services/welding", serial: "04" }, 
+  { id: "5", title: "Mechanical Repairs", imgSrc: "/mechanical-repair.png", link: "/services/mechanical-repair", serial: "05" }, 
 ]; 
 
 const ServiceSection = () => { 

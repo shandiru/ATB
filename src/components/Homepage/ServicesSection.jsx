@@ -24,7 +24,7 @@ const services = [
     id: "3",
     title: "Chain/Belts (Wet Belt Specialist)",
     imgSrc: "/back.jpg",
-    link: "/services/chain/belts",
+    link: "/services/chain-belts",
     icon: <FaCogs className="w-8 h-8 text-[#FFDF20]" />,
     description: "Specialist in wet belts & timing chains.",
   },
