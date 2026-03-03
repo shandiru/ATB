@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Left Section */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-2">
           <p className="text-sm">
-            © 2025 <span className="font-semibold">ATB Motor Engineers Ltd.</span> All rights reserved.
+            &copy; {new Date().getFullYear()} <span className="font-semibold">ATB Motor Engineers Ltd.</span> All rights reserved.
           </p>
           {/* Terms & Privacy Links */}
           <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-300 mt-1">

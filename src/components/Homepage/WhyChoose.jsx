@@ -54,16 +54,22 @@ const AboutSection = () => {
             </p>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-14">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 mb-14">
               {features.map((item, index) => (
                 <div
                   key={index}
-                  className="flex gap-4 items-start p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 group"
+                  className="flex gap-4 items-center p-4 rounded-xl hover:bg-white hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-gray-100"
                 >
-                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#1E3A8A] group-hover:bg-[#0F216B] transition-all duration-300">
-                    {item.icon}
+                  {/* Icon Container: Fixed Square size with Flex Center */}
+                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-[#1E3A8A] group-hover:bg-[#0F216B] transition-all duration-300 shadow-md">
+                    {/* Force icon to fit inside without breaking container */}
+                    <div className="text-white w-6 h-6 flex items-center justify-center">
+                      {item.icon}
+                    </div>
                   </div>
-                  <p className="text-gray-700 leading-relaxed">
+
+                  {/* Text Content */}
+                  <p className="text-gray-700 leading-relaxed text-sm sm:text-base font-medium">
                     {item.text}
                   </p>
                 </div>
