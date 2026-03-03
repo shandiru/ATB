@@ -1,55 +1,75 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FiPhone, FiMail } from "react-icons/fi";
 
-const MotEnd = () => {
+const CallToActionSection = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000,       // Animation speed
-      easing: "ease-in-out", // Smooth easing
-      once: false,           // ✅ Animation will trigger both on scroll down & up
-      mirror: true,          // ✅ Reverses animation when scrolling up
-      offset: 120,           // Triggers animation slightly before visible
+      duration: 900,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
     });
   }, []);
 
   return (
-    <section className="py-20 bg-white" id="about">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 mt-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div data-aos="fade-right">
-            <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E3A8A] mb-6 leading-tight">
-             Peace of Mind Guaranteed
-            </h4>
+    <section
+      id="contact"
+      className="relative bg-[#1E3A8A] text-white py-20 md:py-24 overflow-hidden scroll-m-24"
+    >
+      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 text-center">
+        
+        {/* Heading */}
+        <h4
+          data-aos="fade-up"
+          className="text-3xl md:text-5xl font-extrabold mb-5"
+        >
+          Peace of Mind Guaranteed
+        </h4>
 
-            <p
-              data-aos="fade-up"
-              data-aos-delay="150"
-              className="text-gray-700 text-base md:text-lg leading-relaxed mb-4"
-            >
-             We go beyond basic testing—providing expert diagnostics, pre-checks, and post-failure repairs to ensure your car leaves our garage fully road-legal and performing at its best.
-            </p>
-          </div>
+        {/* Paragraph */}
+        <p
+          data-aos="fade-up"
+          data-aos-delay="150"
+          className="text-lg md:text-xl font-medium text-gray-100 max-w-3xl mx-auto leading-relaxed mb-10"
+        >
+          We go beyond basic testing—providing expert diagnostics, pre-checks,
+          and post-failure repairs to ensure your car leaves our garage fully
+          road-legal and performing at its best.
+        </p>
 
-          {/* Image Section */}
-          <div
-            data-aos="fade-left"
-            className="flex justify-center items-center relative"
+        {/* Buttons */}
+        <div
+          data-aos="zoom-in-up"
+          className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10"
+        >
+          <a
+            href="tel:01332224229"
+            className="bg-[#FFDF20] text-[#1E3A8A] px-8 py-3 rounded-full font-semibold text-lg md:text-xl shadow-md hover:shadow-yellow-400/50 hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
           >
-            <div className="relative group">
-              <img
-                src="/car.png"
-                alt="ATB Motor Engineers"
-                className="rounded-2xl shadow-lg h-110 w-120 hover:shadow-[0_0_30px_rgba(30,58,138,0.4)] transition-all duration-500 transform group-hover:scale-105"
-              />
-              <div className="absolute inset-0 rounded-2xl bg-[#1E3A8A]/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-            </div>
-          </div>
+            <FiPhone className="text-xl" />
+            Call Us: 01332 224229
+          </a>
+
+          <a
+            href="mailto:atbmotorengineers@gmail.com"
+            className="border-2 border-[#FFDF20] text-white px-8 py-3 rounded-full font-semibold text-lg md:text-xl hover:bg-[#FFDF20] hover:text-[#1E3A8A] hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
+          >
+            <FiMail className="text-xl" />
+            Email Us
+          </a>
         </div>
+
+        {/* Decorative Line */}
+        <div
+          data-aos="fade-up"
+          data-aos-delay="300"
+          className="mt-12 w-24 h-[3px] bg-[#FFDF20] mx-auto rounded-full"
+        ></div>
       </div>
     </section>
   );
 };
 
-export default MotEnd;
+export default CallToActionSection;

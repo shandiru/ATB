@@ -1,6 +1,6 @@
 import React from 'react'
 import MotHeader from '../components/Mot/MotHeader'
-import Cta from "../components/common/cta"
+import Cta from "../components/Mot/MotEnd"
 import MotStatsSection from '../components/Mot/MotService'
 import MotAbout from '../components/Mot/MotAbout'
 

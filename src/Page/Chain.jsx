@@ -2,7 +2,7 @@ import React from 'react'
 import ChainHeader from '../components/Chain/ChainHeader'
 import ChainAbout from '../components/Chain/ChainAbout'
 import ChainStatsSection from '../components/Chain/ChainService'
-import Cta from "../components/common/cta"
+import Cta from "../components/Chain/ChainEnd"
 
 const Chain = () => {
   return (

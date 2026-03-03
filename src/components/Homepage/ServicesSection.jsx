@@ -7,7 +7,7 @@ const services = [
   {
     id: "1",
     title: "MOT",
-    imgSrc: "/back.jpg",
+    imgSrc: "/mot.png",
     link: "/services/mot",
     icon: <FaCar className="w-8 h-8 text-[#FFDF20]" />,
     description: "Prep and testing to meet safety standards.",
@@ -15,7 +15,7 @@ const services = [
   {
     id: "2",
     title: "Service",
-    imgSrc: "/back.jpg",
+    imgSrc: "/service.png",
     link: "/services/service",
     icon: <FaTools className="w-8 h-8 text-[#FFDF20]" />,
     description: "Routine checks to keep your car smooth.",
@@ -23,7 +23,7 @@ const services = [
   {
     id: "3",
     title: "Chain/Belts (Wet Belt Specialist)",
-    imgSrc: "/back.jpg",
+    imgSrc: "/belts.png",
     link: "/services/chain-belts",
     icon: <FaCogs className="w-8 h-8 text-[#FFDF20]" />,
     description: "Specialist in wet belts & timing chains.",
@@ -31,7 +31,7 @@ const services = [
   {
     id: "4",
     title: "Welding",
-    imgSrc: "/back.jpg",
+    imgSrc: "/welding.png",
     link: "/services/welding",
     icon: <FaWrench className="w-8 h-8 text-[#FFDF20]" />,
     description: "Structural and body welding services.",
@@ -39,7 +39,7 @@ const services = [
   {
     id: "5",
     title: "Mechanical Repairs",
-    imgSrc: "/back.jpg",
+    imgSrc: "/mechanical-repair.png",
     link: "/services/mechanical-repair",
     icon: <FaScrewdriver className="w-8 h-8 text-[#FFDF20]" />,
     description: "Repairs for brakes, exhausts, suspension.",
@@ -48,55 +48,60 @@ const services = [
 
 const OurServices = () => {
   return (
-    <section className="w-full bg-white text-black py-12 sm:py-16 md:py-20 overflow-x-hidden">
+    <section className="w-full bg-white py-14 sm:py-16 md:py-20">
+      
       {/* Heading */}
-      <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4">
-        <h2 className="text-[#1E3A8A] text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase mb-2 sm:mb-3 tracking-wide">
+      <div className="text-center mb-10 md:mb-14 px-4">
+        <h2 className="text-[#1E3A8A] text-3xl sm:text-4xl font-extrabold uppercase tracking-wide">
           Our Services
         </h2>
-        <div className="w-20 h-1 bg-[#FFDF20] mx-auto mb-4 rounded-full"></div>
-        <p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
-         Providing professional, high-quality motor engineering services to keep your vehicle safe, efficient, and road-ready
+        <div className="w-20 h-1 bg-[#FFDF20] mx-auto my-4 rounded-full"></div>
+        <p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+          Providing professional, high-quality motor engineering services to
+          keep your vehicle safe, efficient, and road-ready
         </p>
       </div>
 
-      {/* Service Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 p-6 lg:grid-cols-3 xl:grid-cols-4 w-full max-w-6xl mx-auto">
+      {/* Cards Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 max-w-7xl mx-auto">
         {services.map((service) => (
           <div
             key={service.id}
-            className="relative w-full h-[400px] transform transition-transform duration-500 hover:scale-[1.02] lg:hover:scale-[1.03] group"
+            className="relative h-[400px] rounded-xl overflow-hidden shadow-xl group transition-transform duration-500 hover:scale-[1.03]"
           >
-            {/* Background Image */}
+            {/* Image */}
             <img
               src={service.imgSrc}
               alt={service.title}
-              className="w-full h-full object-cover rounded-xl shadow-lg"
+              className="w-full h-full object-cover"
               loading="lazy"
             />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-[#0F216B]/20 group-hover:bg-[#0F216B]/40 transition-colors duration-300 rounded-xl"></div>
+            {/* Dark Blue Overlay */}
+            <div className="absolute inset-0 bg-[#0F216B]/75 group-hover:bg-[#0F216B]/85 transition-all duration-300"></div>
 
-            {/* Text + Button */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6">
+            {/* Content */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 text-white">
+              
               {/* Icon */}
-              <div className="mb-3">{service.icon}</div>
+              <div className="mb-4 text-[#FFDF20] text-4xl drop-shadow-lg">
+                {service.icon}
+              </div>
 
               {/* Title */}
-              <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold uppercase tracking-wide mb-2">
+              <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-wide mb-3 drop-shadow-lg">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-800 text-sm sm:text-base md:text-base mb-4">
+              <p className="text-gray-200 text-sm md:text-base mb-5 max-w-xs drop-shadow-md">
                 {service.description}
               </p>
 
-              {/* Learn More Button */}
+              {/* Button */}
               <Link
                 to={service.link}
-                className="bg-[#FFDF20] text-[#0F216B] font-semibold px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg uppercase text-xs sm:text-sm hover:bg-[#1E3A8A] hover:text-white transition-all duration-300 shadow-lg"
+                className="bg-[#FFDF20] text-[#0F216B] font-bold px-6 py-3 rounded-lg uppercase text-sm tracking-wide transition-all duration-300 hover:bg-[#1E3A8A] hover:text-white shadow-lg"
               >
                 Learn More
               </Link>
