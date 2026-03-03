@@ -28,7 +28,8 @@ export default function PartnersSection() {
     { url: "/images-removebg-preview.png", width: 100 },
     { url: "/logo4-removebg-preview.png", width: 150 },
     { url: "/Vauxhall-Logo-removebg-preview.png", width: 150 },
-    { url: "/Toyota-removebg-preview.png", width: 150 },
+    { url: "/Toyota-removebg-preview.png", width: 250 },
+     { url: "/Honda.svg-removebg-preview.png", width: 100 },
 
   ];
 
