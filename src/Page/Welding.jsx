@@ -2,7 +2,7 @@ import React from 'react'
 import WeldingHeader from '../components/Welding/WeldingHeader'
 import WeldingAbout from '../components/Welding/WeldingAbout'
 import WeldingStatsSection from '../components/Welding/WeldingService'
-import Cta from "../components/common/cta"
+import Cta from "../components/Welding/WeldingEnd"
 
 const Welding = () => {
   return (
