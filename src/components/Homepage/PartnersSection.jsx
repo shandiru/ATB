@@ -23,11 +23,13 @@ export default function PartnersSection() {
 
   const logos = [
     { url: "/logo1-removebg-preview.png", width: 200 },
-    { url: "/logo4-removebg-preview.png", width: 200 },
-    { url: "/logo1-removebg-preview.png", width: 200 },
-    { url: "/logo2-removebg-preview.png", width: 200 },
-    { url: "/logo4-removebg-preview.png", width: 200 },
-    { url: "/logo3-removebg-preview.png", width: 200 },
+    { url: "/Mercedes-Benz-removebg-preview.png", width: 100 },
+    { url: "/Color-Audi-logo-removebg-preview.png", width: 200 },
+    { url: "/images-removebg-preview.png", width: 100 },
+    { url: "/logo4-removebg-preview.png", width: 150 },
+    { url: "/Vauxhall-Logo-removebg-preview.png", width: 150 },
+    { url: "/Toyota-removebg-preview.png", width: 150 },
+
   ];
 
   const allLogos = [...logos, ...logos]; // duplicate for seamless scroll
@@ -35,9 +37,8 @@ export default function PartnersSection() {
   return (
     <section
       id="partners"
-      className={`bg-[#1E3A8A] overflow-hidden transition-opacity duration-1000 ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+      className={`bg-[#1E3A8A] overflow-hidden transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"
+        }`}
     >
       <div className="container mx-auto px-4 py-6 sm:px-6 lg:px-8">
         <div className="overflow-hidden">
