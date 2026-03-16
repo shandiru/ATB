@@ -1,6 +1,3 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { FaCalendarAlt, FaCar, FaBroom, FaFileAlt } from "react-icons/fa";
 
 const stats = [
@@ -27,15 +24,6 @@ const stats = [
 ];
 
 const ServiceStatsSection = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: false,
-      mirror: true,
-      offset: 100,
-    });
-  }, []);
 
   return (
     <section className="py-16 bg-gray-50" id="stats">

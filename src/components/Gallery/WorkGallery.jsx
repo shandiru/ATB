@@ -1,40 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function GallerySection() {
-  // Directly reference images in the public folder
   const galleryImages = [
-    "/i1.jpeg",
-    "/i2.jpeg",
-    "/i3.jpeg",
-    "/i4.jpeg",
-    "/i5.jpeg",
-    "/i6.jpeg",
-    "/i7.jpeg",
-    "/i8.jpeg",
-    "/i9.jpeg",
-    "/whoare.jpg",
-    "/i10.jpg",
-    "/i11.jpg",
-    "/i12.jpg",
-    "/i13.jpg",
-    "/i14.jpg",
-    "/i15.jpg",
-    "/i16.jpg",
+    "/i1.jpeg", "/i2.jpeg", "/i3.jpeg", "/i4.jpeg", "/i5.jpeg",
+    "/i6.jpeg", "/i7.jpeg", "/i8.jpeg", "/i9.jpeg", "/whoare.jpg",
+    "/i10.jpg", "/i11.jpg", "/i12.jpg", "/i13.jpg", "/i14.jpg",
+    "/i15.jpg", "/i16.jpg",
   ];
 
-  const IMAGES_PER_PAGE = 6;
+  const getImagesPerPage = () => window.innerWidth < 640 ? 3 : 6;
+
+  const [imagesPerPage, setImagesPerPage] = useState(getImagesPerPage);
   const [startIndex, setStartIndex] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const newPerPage = getImagesPerPage();
+      setImagesPerPage(newPerPage);
+      setStartIndex(0); // reset to first page on resize
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleScroll = (direction) => {
     const nextIndex =
       direction === "left"
-        ? Math.max(startIndex - IMAGES_PER_PAGE, 0)
-        : Math.min(startIndex + IMAGES_PER_PAGE, galleryImages.length - IMAGES_PER_PAGE);
+        ? Math.max(startIndex - imagesPerPage, 0)
+        : Math.min(startIndex + imagesPerPage, galleryImages.length - imagesPerPage);
     setStartIndex(nextIndex);
   };
 
-  const currentImages = galleryImages.slice(startIndex, startIndex + IMAGES_PER_PAGE);
+  const currentImages = galleryImages.slice(startIndex, startIndex + imagesPerPage);
 
   return (
     <section id="gallery" className="px-4 sm:px-6 lg:px-12 bg-[#1E3A8A]/10 py-24" data-aos="fade-up">
@@ -62,7 +60,7 @@ export function GallerySection() {
 
           <button
             onClick={() => handleScroll("right")}
-            disabled={startIndex + IMAGES_PER_PAGE >= galleryImages.length}
+            disabled={startIndex + imagesPerPage >= galleryImages.length}
             className="p-2 sm:p-3 bg-[#0F216B] rounded-full hover:bg-[#969695] transition disabled:opacity-50"
           >
             <ChevronRight className="text-white hover:text-[#1E3A8A]" />
@@ -73,7 +71,7 @@ export function GallerySection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {currentImages.map((image, index) => (
             <div
-              key={index}
+              key={startIndex + index}
               data-aos="zoom-in"
               className="relative w-full aspect-[4/3] md:aspect-[3/2] lg:aspect-[4/3] flex items-center justify-center rounded-lg overflow-hidden group cursor-pointer border-2 border-[#969695] transition-all duration-300 shadow-lg hover:shadow-[#969695]/40"
             >
