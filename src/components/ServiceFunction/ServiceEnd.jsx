@@ -44,7 +44,7 @@ const CallToActionSection = () => {
         >
           <a
             href="tel:01332224229"
-            className="bg-[#FFDF20] text-[#1E3A8A] px-8 py-3 rounded-full font-semibold text-lg md:text-xl shadow-md hover:shadow-yellow-400/50 hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
+            className="bg-[#969695] text-white px-8 py-3 rounded-full font-semibold text-lg md:text-xl shadow-md hover:shadow-[#969695]/50 hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
           >
             <FiPhone className="text-xl" />
             Call Us: 01332 224229
@@ -52,7 +52,7 @@ const CallToActionSection = () => {
 
           <a
             href="mailto:atbmotorengineers@gmail.com"
-            className="border-2 border-[#FFDF20] text-white px-8 py-3 rounded-full font-semibold text-lg md:text-xl hover:bg-[#FFDF20] hover:text-[#1E3A8A] hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
+            className="border-2 border-[#969695] text-white px-8 py-3 rounded-full font-semibold text-lg md:text-xl hover:bg-[#969695] hover:text-[#1E3A8A] hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
           >
             <FiMail className="text-xl" />
             Email Us
@@ -63,7 +63,7 @@ const CallToActionSection = () => {
         <div
           data-aos="fade-up"
           data-aos-delay="300"
-          className="mt-12 w-24 h-[3px] bg-[#FFDF20] mx-auto rounded-full"
+          className="mt-12 w-24 h-[3px] bg-[#969695] mx-auto rounded-full"
         ></div>
       </div>
     </section>

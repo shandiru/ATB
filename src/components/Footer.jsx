@@ -16,7 +16,7 @@ const Footer = () => {
               href="/terms-conditions"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#CCDAFF] hover:text-[#FFDF20] hover:underline"
+              className="text-[#CCDAFF] hover:text-[#969695] hover:underline"
             >
               Terms & Conditions
             </a>
@@ -24,7 +24,7 @@ const Footer = () => {
               href="/privacy-policy"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#CCDAFF] hover:text-[#FFDF20] hover:underline"
+              className="text-[#CCDAFF] hover:text-[#969695] hover:underline"
             >
               Privacy Policy
             </a>
@@ -35,9 +35,9 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 text-sm text-gray-200">
           <a
             href="tel:01332224229"
-            className="flex items-center gap-2 hover:text-[#FFDF20] transition-colors"
+            className="flex items-center gap-2 hover:text-[#969695] transition-colors"
           >
-            <FiPhone className="text-[#1E3A8A]" />
+            <FiPhone className="text-[#969695]" />
             01332 224229
           </a>
 
@@ -45,9 +45,9 @@ const Footer = () => {
 
           <a
             href="mailto:atbmotorengineers@gmail.com"
-            className="flex items-center gap-2 hover:text-[#FFDF20] transition-colors"
+            className="flex items-center gap-2 hover:text-[#969695] transition-colors"
           >
-            <FiMail className="text-[#1E3A8A]" />
+            <FiMail className="text-[#969695]" />
             atbmotorengineers@gmail.com
           </a>
         </div>
@@ -60,7 +60,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="p-2 rounded-full bg-white/10 hover:bg-[#1E3A8A]/20 transition-all duration-300"
           >
-            <FiFacebook className="text-white text-lg hover:text-[#FFDF20] hover:scale-110 transition-transform duration-300" />
+            <FiFacebook className="text-white text-lg hover:text-[#969695] hover:scale-110 transition-transform duration-300" />
           </a>
           
           
@@ -75,7 +75,7 @@ const Footer = () => {
             href="https://www.ansely.co.uk/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-[#FFDF20] hover:underline font-semibold"
+            className="text-white hover:text-[#969695] hover:underline font-semibold"
           >
             Ansely
           </a>
@@ -83,7 +83,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Accent Line */}
-      <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#1E3A8A] via-[#FFDF20] to-[#1E3A8A]" />
+      <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#1E3A8A] via-[#969695] to-[#1E3A8A]" />
     </footer>
   );
 };

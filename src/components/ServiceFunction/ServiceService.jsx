@@ -52,7 +52,7 @@ const ServiceStatsSection = () => {
               <h6 className="text-[#0F216B] font-semibold text-base mt-5 relative inline-block">
                 {stat.label}
                 {/* Yellow underline */}
-                <span className="block w-12 h-1 bg-[#FFDF20] rounded-full mt-2 mx-auto"></span>
+                <span className="block w-12 h-1 bg-[#969695] rounded-full mt-2 mx-auto"></span>
               </h6>
               <p className="text-gray-700 text-sm md:text-base mt-3">
                 {stat.desc}

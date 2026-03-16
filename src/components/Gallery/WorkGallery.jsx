@@ -1,130 +1,103 @@
-import React, { useState, useEffect } from "react";
+"use client";
+
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const categories = [
-  "All",
-  "Engine Services",
-  "Performance Tuning",
-  "Vehicle Repairs",
-  "Custom Engineering",
-  "Restoration",
-  "Transmission Services",
-];
+export function GallerySection() {
+  const galleryImages = Array.from(
+    { length: 22 },
+    (_, i) => `/gallery/${i + 1}.jpeg`
+  );
 
-const galleryItems = [
-  {
-    id: 1,
-    category: "Engine Services",
-    image: "/images/engine1.jpg",
-    title: "Engine Overhaul",
-  },
-  {
-    id: 2,
-    category: "Performance Tuning",
-    image: "/images/tuning1.jpg",
-    title: "ECU Remapping",
-  },
-  {
-    id: 3,
-    category: "Vehicle Repairs",
-    image: "/images/repair1.jpg",
-    title: "Suspension Repair",
-  },
-  {
-    id: 4,
-    category: "Custom Engineering",
-    image: "/images/custom1.jpg",
-    title: "Custom Turbo Setup",
-  },
-  {
-    id: 5,
-    category: "Restoration",
-    image: "/images/restore1.jpg",
-    title: "Classic Car Restoration",
-  },
-  {
-    id: 6,
-    category: "Transmission Services",
-    image: "/images/gearbox1.jpg",
-    title: "Gearbox Repair",
-  },
-];
-
-const WorkGallery = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const IMAGES_PER_PAGE = 6;
+  const [startIndex, setStartIndex] = useState(0);
 
   useEffect(() => {
     AOS.init({
-      duration: 700,
+      duration: 1000,
       easing: "ease-in-out",
       once: false,
-      mirror: true,
     });
   }, []);
 
-  const filteredItems =
-    activeCategory === "All"
-      ? galleryItems
-      : galleryItems.filter((item) => item.category === activeCategory);
+  const handleScroll = (direction) => {
+    const nextIndex =
+      direction === "left"
+        ? Math.max(startIndex - IMAGES_PER_PAGE, 0)
+        : Math.min(
+            startIndex + IMAGES_PER_PAGE,
+            galleryImages.length - IMAGES_PER_PAGE
+          );
+
+    setStartIndex(nextIndex);
+  };
+
+  const currentImages = galleryImages.slice(
+    startIndex,
+    startIndex + IMAGES_PER_PAGE
+  );
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
-        {/* === Category Filter Chips === */}
-        <div
-          data-aos="fade-up"
-          className="flex flex-wrap justify-center gap-3 mb-10"
-        >
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-full text-sm md:text-base font-medium border transition-all duration-300 ${
-                activeCategory === cat
-                  ? "bg-[#1E3A8A] text-white border-[#1E3A8A] shadow-md"
-                  : "bg-white text-gray-700 border-gray-300 hover:bg-[#1E3A8A]/10"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+    <section
+      id="gallery"
+      className="px-6 lg:px-12 bg-[#1E3A8A] py-24"
+      data-aos="fade-up"
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-16" data-aos="fade-down">
+          <div className="flex items-center justify-center mb-8">
+            <div className="w-12 h-px bg-[#969695] mr-4"></div>
+            <p className="text-[#969695] text-sm font-medium uppercase tracking-wider">
+              OUR GALLERY
+            </p>
+            <div className="w-12 h-px bg-[#969695] ml-4"></div>
+          </div>
         </div>
 
-        {/* === Gallery Grid === */}
+        {/* Arrows */}
         <div
+          className="flex items-center justify-center gap-6 pb-3"
           data-aos="fade-up"
-          data-aos-delay="200"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {filteredItems.map((item) => (
+          <button
+            onClick={() => handleScroll("left")}
+            disabled={startIndex === 0}
+            className="p-2 bg-[#0F216B] rounded-full hover:bg-[#969695] transition disabled:opacity-50"
+          >
+            <ChevronLeft className="text-white hover:text-[#1E3A8A]" />
+          </button>
+
+          <button
+            onClick={() => handleScroll("right")}
+            disabled={startIndex + IMAGES_PER_PAGE >= galleryImages.length}
+            className="p-2 bg-[#0F216B] rounded-full hover:bg-[#969695] transition disabled:opacity-50"
+          >
+            <ChevronRight className="text-white hover:text-[#1E3A8A]" />
+          </button>
+        </div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {currentImages.map((image, index) => (
             <div
-              key={item.id}
-              className="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:-translate-y-2 bg-white"
+              key={index}
+              data-aos="zoom-in"
+              className="relative h-[520px] w-full flex items-center justify-center rounded-lg overflow-hidden group cursor-pointer border-2 border-[#969695] hover:border-[#969695] transition-all duration-300 shadow-lg hover:shadow-[#969695]/40"
             >
               <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500"
+                src={image}
+                alt={`Gallery image ${startIndex + index + 1}`}
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                <h5 className="text-white text-lg font-semibold text-center px-4">
-                  {item.title}
-                </h5>
-              </div>
             </div>
           ))}
         </div>
-
-        {/* No items message */}
-        {filteredItems.length === 0 && (
-          <p className="text-center text-gray-500 mt-10">
-            No projects found for this category.
-          </p>
-        )}
       </div>
     </section>
   );
-};
+}
 
-export default WorkGallery;
+export default GallerySection;

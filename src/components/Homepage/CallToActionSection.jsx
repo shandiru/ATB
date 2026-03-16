@@ -16,9 +16,16 @@ const CallToActionSection = () => {
   return (
     <section
       id="contact"
-      className="relative bg-[#1E3A8A] text-white py-20 md:py-24 overflow-hidden scroll-m-24"
+      className="relative text-white py-20 md:py-24 overflow-hidden scroll-m-24"
     >
-      <div className="absolute inset-0 "></div>
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url('/bg.jpg')` }}
+      ></div>
+
+      {/* Optional Dark Overlay for text readability */}
+      <div className="absolute inset-0 bg-black/20"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 text-center">
         {/* Heading */}
@@ -35,7 +42,7 @@ const CallToActionSection = () => {
           className="text-lg md:text-xl font-medium text-gray-100 max-w-3xl mx-auto leading-relaxed mb-10"
         >
           Join hundreds of satisfied customers who trust{" "}
-          <span className="font-semibold text-yellow-300">
+          <span className="font-semibold text-[#1E3A8A]">
             ATB Motor Engineers
           </span>{" "}
           for reliability, performance, and complete automotive care.
@@ -48,25 +55,18 @@ const CallToActionSection = () => {
         >
           <a
             href="tel:01332224229"
-            className="bg-yellow-300 text-[#1E3A8A] px-8 py-3 rounded-full font-semibold text-lg md:text-xl shadow-md hover:shadow-yellow-400/50 hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
+            className="bg-[#969695] text-white px-8 py-3 rounded-full font-semibold text-lg md:text-xl shadow-md hover:shadow-[#969695]/50 hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
           >
             <FiPhone className="text-xl" /> Call Us: 01332 224229
           </a>
 
           <a
             href="mailto:atbmotorengineers@gmail.com"
-            className="border-2 border-yellow-300 text-white px-8 py-3 rounded-full font-semibold text-lg md:text-xl hover:bg-yellow-300 hover:text-[#1E3A8A] hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
+            className="border-2 border-[#969695] text-white px-8 py-3 rounded-full font-semibold text-lg md:text-xl hover:bg-[#969695] hover:text-[#1E3A8A] hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center"
           >
             <FiMail className="text-xl" /> Email Us
           </a>
         </div>
-
-        {/* Decorative Line */}
-        <div
-          data-aos="fade-up"
-          data-aos-delay="300"
-          className="mt-12 w-24 h-[3px] bg-yellow-300 mx-auto rounded-full"
-        ></div>
       </div>
     </section>
   );

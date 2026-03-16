@@ -3,26 +3,26 @@ import { Award, Drill, Settings, UserCheck } from "lucide-react";
 
 const features = [
   {
-    icon: <Award className="w-8 h-8 text-[#FFDF20]" />,
+    icon: <Award className="w-8 h-8 text-[#969695]" />,
     text: "Years of hands-on experience delivering professional motor engineering services across Derby and surrounding areas.",
   },
   {
-    icon: <Drill className="w-8 h-8 text-[#FFDF20]" />,
+    icon: <Drill className="w-8 h-8 text-[#969695]" />,
     text: "Specialists in MOT preparation, servicing, wet belt replacements, welding, and complex mechanical repairs.",
   },
   {
-    icon: <Settings className="w-8 h-8 text-[#FFDF20]" />,
+    icon: <Settings className="w-8 h-8 text-[#969695]" />,
     text: "Equipped with modern diagnostic technology and industry-approved tools to ensure accurate and efficient results.",
   },
   {
-    icon: <UserCheck className="w-8 h-8 text-[#FFDF20]" />,
+    icon: <UserCheck className="w-8 h-8 text-[#969695]" />,
     text: "Customer-focused service with transparent pricing, clear communication, and attention to detail on every vehicle.",
   },
 ];
 
 const AboutSection = () => {
   return (
-    <section className="bg-gray-100 py-36">
+    <section className="bg-gray-100 py-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 

@@ -38,7 +38,7 @@ const ServiceSection = () => {
               <div className="absolute inset-0 flex flex-col justify-center items-center p-4 bg-[#1E3A8A]/70 transition-all duration-500 opacity-0 group-hover:opacity-100"> 
                 <Link 
                   to={service.link} 
-                  className="bg-[#FFDF20] text-[#0F216B] px-4 py-1.5 rounded hover:bg-[#1E3A8A] hover:text-white transition overflow-hidden relative group/button h-9 flex items-center justify-center" 
+                  className="bg-[#969695] text-[#0F216B] px-4 py-1.5 rounded hover:bg-[#1E3A8A] hover:text-white transition overflow-hidden relative group/button h-9 flex items-center justify-center" 
                 > 
                   <span className="inline-block transition-transform duration-300 transform translate-y-0 group-hover/button:-translate-y-full"> 
                     Read More 
@@ -83,7 +83,7 @@ const ServiceSection = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-4 bg-[#1E3A8A]/70 transition-all duration-500 opacity-0 group-hover:opacity-100"> 
                   <Link 
                     to={service.link} 
-                    className="bg-[#FFDF20] text-[#0F216B] px-4 py-1.5 rounded hover:bg-[#1E3A8A] hover:text-white transition overflow-hidden relative group/button h-9 flex items-center justify-center" 
+                    className="bg-[#969695] text-[#0F216B] px-4 py-1.5 rounded hover:bg-[#1E3A8A] hover:text-white transition overflow-hidden relative group/button h-9 flex items-center justify-center" 
                   > 
                     <span className="inline-block transition-transform duration-300 transform translate-y-0 group-hover/button:-translate-y-full"> 
                       Read More 

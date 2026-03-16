@@ -107,12 +107,12 @@ const TestimonialsSection = () => {
         data-aos="fade-up"
       >
         <div data-aos="fade-right">
-          <p className="text-[#FFDF20] uppercase tracking-[5px] text-sm font-semibold mb-2">
+          <p className="text-[#969695] uppercase tracking-[5px] text-sm font-semibold mb-2">
             {testimonialsContent.headerSmall}
           </p>
           <h2 className="text-4xl md:text-5xl font-extrabold leading-[1.2] text-[#1E3A8A]">
             {testimonialsContent.headerBig.split(" ")[0]}{" "}
-            <span className="text-[#FFDF20]">
+            <span className="text-[#969695]">
               {testimonialsContent.headerBig.split(" ")[2]}
             </span>{" "}
             {testimonialsContent.headerBig.split(" ").slice(3).join(" ")}
@@ -127,7 +127,7 @@ const TestimonialsSection = () => {
           onClick={() => scrollToSection("contact")}
           data-aos="zoom-in"
           data-aos-delay="200"
-          className="mt-8 md:mt-0 flex items-center gap-2 bg-[#FFDF20] hover:bg-[#1E3A8A] text-[#0F216B] hover:text-[#FFDF20] font-semibold uppercase px-8 py-3 rounded-md transition-all duration-300"
+          className="mt-8 md:mt-0 flex items-center gap-2 bg-[#969695] hover:bg-[#1E3A8A] text-[#0F216B] hover:text-[#969695] font-semibold uppercase px-8 py-3 rounded-md transition-all duration-300"
         >
           {testimonialsContent.buttonText}
           <svg
@@ -157,13 +157,13 @@ const TestimonialsSection = () => {
           {[...testimonialsData, ...testimonialsData].map((item, i) => (
             <div
               key={`${direction}-${i}`}
-              className="bg-[#1E3A8A]/10 border border-[#0F216B] rounded-2xl p-6 flex flex-col justify-between shrink-0 hover:border-[#FFDF20] transition-all duration-300 w-[340px] h-80"
+              className="bg-[#1E3A8A]/10 border border-[#0F216B] rounded-2xl p-6 flex flex-col justify-between shrink-0 hover:border-[#969695] transition-all duration-300 w-[340px] h-80"
             >
               <p className="italic text-[#0F216B] text-[15px] leading-relaxed line-clamp-8 overflow-hidden">
                 “{item.review}”
               </p>
               <div className="flex items-center gap-3 mt-6">
-                <div className="w-10 h-10 flex items-center justify-center bg-[#FFDF20] text-[#0F216B] font-semibold rounded-full">
+                <div className="w-10 h-10 flex items-center justify-center bg-[#969695] text-[#0F216B] font-semibold rounded-full">
                   {item.initials}
                 </div>
                 <div>

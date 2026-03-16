@@ -15,11 +15,13 @@ import Service from "./Page/Service.jsx";
 import Chain from "./Page/Chain.jsx";
 import Welding from "./Page/Welding.jsx";
 import Repair from "./Page/Repair.jsx";
+import ScrollToHash from "./components/ScrollToHash.jsx";
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollToHash />
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />

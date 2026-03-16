@@ -59,7 +59,7 @@ const ChainAbout = () => {
                 <li key={index} className="flex items-start gap-3">
                   {/* Yellow checkmark with hover glow */}
                   <IoMdCheckmarkCircleOutline 
-                    className="text-[#FFDF20] text-lg mt-1 flex-shrink-0 transition-all duration-300 hover:drop-shadow-[0_0_6px_#FFDF20]" 
+                    className="text-[#969695] text-lg mt-1 flex-shrink-0 transition-all duration-300 hover:drop-shadow-[0_0_6px_#969695]" 
                   />
                   <span className="text-gray-700 text-sm md:text-base">{item}</span>
                 </li>

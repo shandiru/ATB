@@ -41,14 +41,14 @@ export default function GDPRConsent() {
       {visible && (
         <div className="fixed bottom-4 left-4 right-4 md:bottom-6 text-center md:right-6 md:left-auto max-w-full md:max-w-xs p-4 rounded-lg 
                          text-gray-900 shadow-lg z-50 
-                      bg-gray-900 dark:text-gray-100 transition-colors">
+                      bg-gray-900 transition-colors">
           <p className="text-sm mb-2 text-center text-white">
             We use cookies to improve your experience.{" "}
           </p>
           <p className="mb-3">
             <a
               href="/privacy-policy"
-              className="underline text-[#123bad] hover:text-[#007BC2] dark:text-[#1E3A8A] dark:hover:text-[#007BC2]"
+              className="underline text-[#123bad] hover:text-[#007BC2]"
             >
               See our Privacy Policy
             </a>
@@ -57,7 +57,7 @@ export default function GDPRConsent() {
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <button
               onClick={handleReject}
-              className="bg-[#1E3A8A] text-white px-4 py-2 rounded text-sm hover:bg-[#007BC2] dark:hover:bg-[#007BC2] transition"
+              className="bg-[#1E3A8A] text-white px-4 py-2 rounded text-sm hover:bg-[#007BC2] transition"
             >
               Reject
             </button>
@@ -65,7 +65,7 @@ export default function GDPRConsent() {
               onClick={handleAccept}
               className="bg-gray-100 text-gray-900 px-4 py-2 rounded text-sm 
                          hover:bg-gray-200 transition 
-                         dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
+                    "
             >
               Accept
             </button>
@@ -80,7 +80,7 @@ export default function GDPRConsent() {
             onClick={handleIconClick}
             className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#1E3A8A] shadow-lg border border-white 
                        flex items-center justify-center hover:scale-105 transition cursor-pointer
-                       dark:border-gray-800"
+                       "
             title="Cookie Preferences"
           >
             <img
