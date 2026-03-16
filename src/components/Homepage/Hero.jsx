@@ -11,8 +11,10 @@ const HeroVideoSection = () => {
         loop
         muted
         playsInline
+        poster="/fall.png"
+        onError={(e) => (e.currentTarget.style.display = "none")}
       >
-        <source src="/video.mp4" type="video/mp4" />
+        <source src="/bg.mp4" type="video/mp4" />
       </video>
 
       {/* Dark Overlay - Increased opacity for better text readability on mobile */}

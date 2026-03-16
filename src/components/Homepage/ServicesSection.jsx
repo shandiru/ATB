@@ -8,7 +8,7 @@ const services = [
     title: "MOT",
     imgSrc: "/mot.png",
     link: "/services/mot",
-    icon: <FaCar className="w-8 h-8 text-[#969695]" />,
+    icon: <FaCar className="text-[#969695]" />,
     description: "Prep and testing to meet safety standards.",
   },
   {
@@ -16,7 +16,7 @@ const services = [
     title: "Service",
     imgSrc: "/service.png",
     link: "/services/service",
-    icon: <FaTools className="w-8 h-8 text-[#969695]" />,
+    icon: <FaTools className="text-[#969695]" />,
     description: "Routine checks to keep your car smooth.",
   },
   {
@@ -24,7 +24,7 @@ const services = [
     title: "Chain/Belts (Wet Belt Specialist)",
     imgSrc: "/belts.png",
     link: "/services/chain-belts",
-    icon: <FaCogs className="w-8 h-8 text-[#969695]" />,
+    icon: <FaCogs className="text-[#969695]" />,
     description: "Specialist in wet belts & timing chains.",
   },
   {
@@ -32,7 +32,7 @@ const services = [
     title: "Welding",
     imgSrc: "/welding.png",
     link: "/services/welding",
-    icon: <FaWrench className="w-8 h-8 text-[#969695]" />,
+    icon: <FaWrench className="text-[#969695]" />,
     description: "Structural and body welding services.",
   },
   {
@@ -40,70 +40,64 @@ const services = [
     title: "Mechanical Repairs",
     imgSrc: "/mechanical-repair.png",
     link: "/services/mechanical-repair",
-    icon: <FaScrewdriver className="w-8 h-8 text-[#969695]" />,
+    icon: <FaScrewdriver className="text-[#969695]" />,
     description: "Repairs for brakes, exhausts, suspension.",
   },
 ];
 
 const OurServices = () => {
   return (
-    <section className="w-full bg-white py-14">
+    <section className="w-full bg-white py-16 px-4 sm:px-6 lg:px-12">
       {/* Heading */}
-      <div className="text-center mb-10 md:mb-14 px-4">
+      <div className="text-center mb-12">
         <h2 className="text-[#1E3A8A] text-3xl sm:text-4xl font-extrabold uppercase tracking-wide">
           Our Services
         </h2>
-        <div className="bg-[#969695] mx-auto my-4 rounded-full"></div>
+        <div className="w-20 h-1 bg-[#969695] mx-auto my-4 rounded-full"></div>
         <p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
-          Providing professional, high-quality motor engineering services to
-          keep your vehicle safe, efficient, and road-ready
+          Providing professional, high-quality motor engineering services to keep your vehicle safe, efficient, and road-ready
         </p>
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6  px-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
         {services.map((service) => (
           <div
             key={service.id}
-            className="relative h-[300px] sm:h-[350px]  rounded-xl overflow-hidden shadow-xl group transition-transform duration-500 hover:scale-[1.03]"
+            className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 flex flex-col h-full"
           >
             {/* Image */}
-            <img
-              src={service.imgSrc}
-              alt={service.title}
-              className="w-full h-full object-cover rounded-xl"
-              loading="lazy"
-            />
-
-            {/* Blue Overlay */}
-            <div className="absolute inset-0  group-hover:bg-[#0F216B]/55 transition-all duration-300"></div>
+            <div className="relative w-full aspect-[4/3]">
+              <img
+                src={service.imgSrc}
+                alt={service.title}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
 
             {/* Content */}
-            <div className="absolute inset-0 flex flex-col justify-between items-center text-center px-6 py-6 text-white">
-              <div>
-                {/* Icon */}
-                <div className="mb-4 pt-2 text-[#969695] text-4xl drop-shadow-lg">
-                  {service.icon}
-                </div>
-
-                {/* Title */}
-                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-wide mb-3 drop-shadow-lg">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-200 text-sm md:text-lg max-w-xs drop-shadow-md">
-                  {service.description}
-                </p>
+            <div className="p-6 flex flex-col flex-grow">
+              {/* Icon */}
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#1E3A8A] mb-4 text-2xl">
+                {service.icon}
               </div>
 
+              {/* Title */}
+              <h3 className="text-[#1E3A8A] font-bold text-xl sm:text-2xl mb-2">{service.title}</h3>
+
+              {/* Description */}
+              <p className="text-gray-700 text-sm sm:text-base flex-grow">{service.description}</p>
+
               {/* Button */}
-              <Link
-                to={service.link}
-                className="bg-[#969695] text-[#0F216B] font-bold px-6 py-3 rounded-lg uppercase text-sm tracking-wide transition-all duration-300 hover:bg-[#1E3A8A] hover:text-white shadow-lg"
-              >
-                Learn More
-              </Link>
+              <div className="mt-4">
+                <Link
+                  to={service.link}
+                  className="inline-block bg-[#969695] text-[#0F216B] font-bold px-5 py-2 rounded-lg uppercase text-sm tracking-wide transition-all duration-300 hover:bg-[#1E3A8A] hover:text-white shadow"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
           </div>
         ))}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MotHeader = () => {
 
@@ -23,15 +24,15 @@ const MotHeader = () => {
              Ensure your vehicle meets all UK road safety and environmental standards with our professional MOT preparation and testing services. Whether it’s a car, van, or commercial vehicle, we make the process smooth, transparent, and stress-free.
             </p>
 
-            <a
-              href="/#contact"
+            <Link
+              to="/#contact"
               data-aos="zoom-in"
               data-aos-delay="450"
                 className="inline-block bg-[#969695] hover:bg-[#969695] text-[#0F216B] px-8 py-3 rounded-full text-lg font-medium shadow-md hover:shadow-xl transition-all duration-300"
             
             >
               Book MOT
-            </a>
+            </Link>
           </div>
 
           {/* Image Section */}
@@ -43,6 +44,7 @@ const MotHeader = () => {
               <img
                 src="/car.png"
                 alt="ATB Motor Engineers"
+                loading="lazy"
                 className="rounded-2xl shadow-lg h-110 w-120 hover:shadow-[0_0_30px_rgba(30,58,138,0.4)] transition-all duration-500 transform group-hover:scale-105"
               />
               <div className="absolute inset-0 rounded-2xl bg-[#1E3A8A]/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>

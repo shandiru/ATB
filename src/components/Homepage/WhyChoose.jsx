@@ -31,6 +31,7 @@ const AboutSection = () => {
             <img
               src="whoare.jpg"
               alt="About us"
+              loading="lazy"
               className="w-full max-w-[580px] rounded-3xl object-cover shadow-xl"
             />
           </div>

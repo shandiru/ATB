@@ -77,6 +77,7 @@ export function GallerySection() {
             >
               <img
                 src={image}
+                loading="lazy"
                 alt={`Gallery image ${startIndex + index + 1}`}
                 className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
               />

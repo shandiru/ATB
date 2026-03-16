@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const ChainHeader = () => {
 
@@ -22,15 +23,15 @@ const ChainHeader = () => {
              Ensure your engine runs seamlessly with our professional timing chain and wet belt services. We use specialist tools, OEM parts, and expert diagnostics to maintain precision, prevent failure, and protect your engine’s longevity.
             </p>
 
-            <a
-              href="/#contact"
+            <Link
+              to="/#contact"
               data-aos="zoom-in"
               data-aos-delay="450"
                 className="inline-block bg-[#969695] hover:bg-[#969695] text-[#0F216B] px-8 py-3 rounded-full text-lg font-medium shadow-md hover:shadow-xl transition-all duration-300"
             
             >
               Book Appointment
-            </a>
+            </Link>
           </div>
 
           {/* Image Section */}
@@ -41,6 +42,7 @@ const ChainHeader = () => {
             <div className="relative group">
               <img
                 src="/car.png"
+                loading="lazy"
                 alt="ATB Motor Engineers"
                 className="rounded-2xl shadow-lg h-110 w-120 hover:shadow-[0_0_30px_rgba(30,58,138,0.4)] transition-all duration-500 transform group-hover:scale-105"
               />

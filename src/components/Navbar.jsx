@@ -79,6 +79,7 @@ const Navbar = () => {
           <img
             src="/image.png"
             alt="Company Logo"
+            loading="lazy"
             className="h-16 md:h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
           />
         </Link>

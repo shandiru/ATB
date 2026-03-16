@@ -56,7 +56,7 @@ export default function ContactSection() {
         <div className="space-y-8">
           <div>
             <p className="uppercase text-[#969695] text-sm tracking-widest mb-2">
-              // Contact
+              Contact
             </p>
 
             <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-[#1E3A8A]">
