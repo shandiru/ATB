@@ -1,7 +1,4 @@
-import React, { useEffect } from "react";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const sections = [
   {
@@ -38,9 +35,6 @@ const sections = [
 ];
 
 const MotAbout = () => {
-  useEffect(() => {
-    AOS.init({ duration: 800, easing: "ease-in-out", once: true });
-  }, []);
 
   return (
     <section className="text-black py-16 px-6 md:px-12">

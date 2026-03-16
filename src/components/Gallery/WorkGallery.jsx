@@ -1,56 +1,49 @@
-"use client";
-
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export function GallerySection() {
-  const galleryImages = Array.from(
-    { length: 22 },
-    (_, i) => `/gallery/${i + 1}.jpeg`
-  );
+  // Directly reference images in the public folder
+  const galleryImages = [
+    "/i1.jpeg",
+    "/i2.jpeg",
+    "/i3.jpeg",
+    "/i4.jpeg",
+    "/i5.jpeg",
+    "/i6.jpeg",
+    "/i7.jpeg",
+    "/i8.jpeg",
+    "/i9.jpeg",
+    "/whoare.jpg",
+    "/i10.jpg",
+    "/i11.jpg",
+    "/i12.jpg",
+    "/i13.jpg",
+    "/i14.jpg",
+    "/i15.jpg",
+    "/i16.jpg",
+  ];
 
   const IMAGES_PER_PAGE = 6;
   const [startIndex, setStartIndex] = useState(0);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: false,
-    });
-  }, []);
 
   const handleScroll = (direction) => {
     const nextIndex =
       direction === "left"
         ? Math.max(startIndex - IMAGES_PER_PAGE, 0)
-        : Math.min(
-            startIndex + IMAGES_PER_PAGE,
-            galleryImages.length - IMAGES_PER_PAGE
-          );
-
+        : Math.min(startIndex + IMAGES_PER_PAGE, galleryImages.length - IMAGES_PER_PAGE);
     setStartIndex(nextIndex);
   };
 
-  const currentImages = galleryImages.slice(
-    startIndex,
-    startIndex + IMAGES_PER_PAGE
-  );
+  const currentImages = galleryImages.slice(startIndex, startIndex + IMAGES_PER_PAGE);
 
   return (
-    <section
-      id="gallery"
-      className="px-6 lg:px-12 bg-[#1E3A8A] py-24"
-      data-aos="fade-up"
-    >
+    <section id="gallery" className="px-4 sm:px-6 lg:px-12 bg-[#1E3A8A]/10 py-24" data-aos="fade-up">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-down">
           <div className="flex items-center justify-center mb-8">
             <div className="w-12 h-px bg-[#969695] mr-4"></div>
-            <p className="text-[#969695] text-sm font-medium uppercase tracking-wider">
+            <p className="text-[#1E3A8A] text-lg font-medium uppercase tracking-wider">
               OUR GALLERY
             </p>
             <div className="w-12 h-px bg-[#969695] ml-4"></div>
@@ -58,14 +51,11 @@ export function GallerySection() {
         </div>
 
         {/* Arrows */}
-        <div
-          className="flex items-center justify-center gap-6 pb-3"
-          data-aos="fade-up"
-        >
+        <div className="flex items-center justify-center gap-6 pb-6" data-aos="fade-up">
           <button
             onClick={() => handleScroll("left")}
             disabled={startIndex === 0}
-            className="p-2 bg-[#0F216B] rounded-full hover:bg-[#969695] transition disabled:opacity-50"
+            className="p-2 sm:p-3 bg-[#0F216B] rounded-full hover:bg-[#969695] transition disabled:opacity-50"
           >
             <ChevronLeft className="text-white hover:text-[#1E3A8A]" />
           </button>
@@ -73,7 +63,7 @@ export function GallerySection() {
           <button
             onClick={() => handleScroll("right")}
             disabled={startIndex + IMAGES_PER_PAGE >= galleryImages.length}
-            className="p-2 bg-[#0F216B] rounded-full hover:bg-[#969695] transition disabled:opacity-50"
+            className="p-2 sm:p-3 bg-[#0F216B] rounded-full hover:bg-[#969695] transition disabled:opacity-50"
           >
             <ChevronRight className="text-white hover:text-[#1E3A8A]" />
           </button>
@@ -85,7 +75,7 @@ export function GallerySection() {
             <div
               key={index}
               data-aos="zoom-in"
-              className="relative h-[520px] w-full flex items-center justify-center rounded-lg overflow-hidden group cursor-pointer border-2 border-[#969695] hover:border-[#969695] transition-all duration-300 shadow-lg hover:shadow-[#969695]/40"
+              className="relative w-full aspect-[4/3] md:aspect-[3/2] lg:aspect-[4/3] flex items-center justify-center rounded-lg overflow-hidden group cursor-pointer border-2 border-[#969695] transition-all duration-300 shadow-lg hover:shadow-[#969695]/40"
             >
               <img
                 src={image}

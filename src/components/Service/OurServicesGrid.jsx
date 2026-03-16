@@ -1,5 +1,4 @@
-import React from "react";
-import { FaCar, FaCogs, FaTools, FaWrench, FaBolt, FaCertificate } from "react-icons/fa";
+import { FaCogs, FaTools, FaWrench, FaBolt, FaCertificate } from "react-icons/fa";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const services = [

@@ -1,17 +1,6 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 
 const AboutSection = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,       // Animation speed
-      easing: "ease-in-out", // Smooth easing
-      once: false,           // Animation triggers on scroll down & up
-      mirror: true,          // Reverses animation when scrolling up
-      offset: 120,           // Triggers animation slightly before visible
-    });
-  }, []);
 
   return (
     <section className="py-20 bg-white" id="about">

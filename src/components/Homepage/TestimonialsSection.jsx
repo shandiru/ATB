@@ -1,7 +1,4 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useState } from "react";
 
 // Content object
 const testimonialsContent = {
@@ -83,9 +80,6 @@ const testimonialsData = [
 const TestimonialsSection = () => {
   const [paused, setPaused] = useState(false);
 
-  useEffect(() => {
-    AOS.init({ duration: 1000, easing: "ease-out-cubic", once: false });
-  }, []);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);

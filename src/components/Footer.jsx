@@ -1,5 +1,6 @@
 import React from "react";
 import { FiFacebook, FiPhone, FiMail } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,22 +13,22 @@ const Footer = () => {
           </p>
           {/* Terms & Privacy Links */}
           <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-300 mt-1">
-            <a
-              href="/terms-conditions"
+            <Link
+              to="/terms-conditions"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#CCDAFF] hover:text-[#969695] hover:underline"
             >
               Terms & Conditions
-            </a>
-            <a
-              href="/privacy-policy"
+            </Link>
+            <Link
+              to="/privacy-policy"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#CCDAFF] hover:text-[#969695] hover:underline"
             >
               Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
 

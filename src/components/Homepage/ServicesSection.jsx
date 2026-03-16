@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaCar, FaTools, FaCogs, FaWrench, FaScrewdriver } from "react-icons/fa";
@@ -54,7 +53,7 @@ const OurServices = () => {
         <h2 className="text-[#1E3A8A] text-3xl sm:text-4xl font-extrabold uppercase tracking-wide">
           Our Services
         </h2>
-        <div className="w-20 h-1 bg-[#969695] mx-auto my-4 rounded-full"></div>
+        <div className="bg-[#969695] mx-auto my-4 rounded-full"></div>
         <p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
           Providing professional, high-quality motor engineering services to
           keep your vehicle safe, efficient, and road-ready
@@ -62,17 +61,17 @@ const OurServices = () => {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6  px-6 max-w-7xl mx-auto">
         {services.map((service) => (
           <div
             key={service.id}
-            className="relative h-[350px] rounded-xl overflow-hidden shadow-xl group transition-transform duration-500 hover:scale-[1.03]"
+            className="relative h-[300px] sm:h-[350px]  rounded-xl overflow-hidden shadow-xl group transition-transform duration-500 hover:scale-[1.03]"
           >
             {/* Image */}
             <img
               src={service.imgSrc}
               alt={service.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-xl"
               loading="lazy"
             />
 
@@ -83,7 +82,7 @@ const OurServices = () => {
             <div className="absolute inset-0 flex flex-col justify-between items-center text-center px-6 py-6 text-white">
               <div>
                 {/* Icon */}
-                <div className="mb-4 text-[#969695] text-4xl drop-shadow-lg">
+                <div className="mb-4 pt-2 text-[#969695] text-4xl drop-shadow-lg">
                   {service.icon}
                 </div>
 

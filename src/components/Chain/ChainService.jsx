@@ -1,6 +1,3 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { FaCalendarAlt, FaCar, FaBroom, FaFileAlt } from "react-icons/fa";
 
 const stats = [
@@ -27,15 +24,6 @@ const stats = [
 ];
 
 const ChainStatsSection = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: false,
-      mirror: true,
-      offset: 100,
-    });
-  }, []);
 
   return (
     <section className="py-16 bg-gray-50" id="stats">
@@ -51,7 +39,6 @@ const ChainStatsSection = () => {
               {stat.icon}
               <h6 className="text-[#0F216B] font-semibold text-base mt-5 relative inline-block">
                 {stat.label}
-                {/* Yellow underline */}
                 <span className="block w-12 h-1 bg-[#969695] rounded-full mt-2 mx-auto"></span>
               </h6>
               <p className="text-gray-700 text-sm md:text-base mt-3">

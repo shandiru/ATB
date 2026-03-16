@@ -1,15 +1,6 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 
 const HeroVideoSection = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      easing: "ease-in-out",
-      once: true,
-    });
-  }, []);
 
   return (
     <header className="relative bg-[#1E3A8A] text-white min-h-screen flex items-center overflow-hidden">
