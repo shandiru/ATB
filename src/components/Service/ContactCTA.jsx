@@ -1,20 +1,27 @@
 import { FiPhone, FiMail } from "react-icons/fi";
 
 const CallToActionSection = () => {
-
   return (
     <section
       id="contact"
-      className="relative bg-[#1E3A8A] text-white py-20 md:py-24 overflow-hidden scroll-m-24"
+      className="relative bg-black text-white py-20 md:py-24 overflow-hidden scroll-m-24"
     >
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center opacity-30"
+        style={{ backgroundImage: "url('/bg.jpg')" }} // Replace with your image in public folder
+      ></div>
+
+      {/* Overlay (optional, for better contrast) */}
+
+      {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 text-center">
-        
         {/* Heading */}
         <h4
           data-aos="fade-up"
           className="text-3xl md:text-5xl font-extrabold mb-5"
         >
-         Need Professional Motor Engineering Services?
+          Need Professional Motor Engineering Services?
         </h4>
 
         {/* Paragraph */}
@@ -47,13 +54,6 @@ const CallToActionSection = () => {
             Email Us
           </a>
         </div>
-
-        {/* Decorative Line */}
-        <div
-          data-aos="fade-up"
-          data-aos-delay="300"
-          className="mt-12 w-24 h-[3px] bg-[#969695] mx-auto rounded-full"
-        ></div>
       </div>
     </section>
   );

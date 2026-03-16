@@ -1,14 +1,19 @@
 import { FiPhone, FiMail } from "react-icons/fi";
 
-const CallToActionSection = () => {
-
+const PeaceOfMindSection = () => {
   return (
     <section
-      id="contact"
-      className="relative bg-[#1E3A8A] text-white py-20 md:py-24 overflow-hidden scroll-m-24"
+      id="peace-of-mind"
+      className="relative bg-black text-white py-20 md:py-24 overflow-hidden scroll-m-24"
     >
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center opacity-30"
+        style={{ backgroundImage: "url('/bg.jpg')" }} // Place your image in public folder
+      ></div>
+
+      {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-10 text-center">
-        
         {/* Heading */}
         <h4
           data-aos="fade-up"
@@ -49,16 +54,9 @@ const CallToActionSection = () => {
             Email Us
           </a>
         </div>
-
-        {/* Decorative Line */}
-        <div
-          data-aos="fade-up"
-          data-aos-delay="300"
-          className="mt-12 w-24 h-[3px] bg-[#969695] mx-auto rounded-full"
-        ></div>
       </div>
     </section>
   );
 };
 
-export default CallToActionSection;
+export default PeaceOfMindSection;
