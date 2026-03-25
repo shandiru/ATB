@@ -3,23 +3,23 @@ import { FaCalendarAlt, FaCar, FaBroom, FaFileAlt } from "react-icons/fa";
 const stats = [
   {
     icon: <FaCalendarAlt className="mx-auto text-4xl text-[#1E3A8A]" />,
-    label: "Book Early",
-    desc: "Avoid the rush—schedule your MOT up to one month before expiry without losing your renewal date.",
+    label: "Act Early",
+    desc: "Address rust or cracks as soon as you spot them—early welding can save you from major repairs later.",
   },
   {
     icon: <FaCar className="mx-auto text-4xl text-[#1E3A8A]" />,
-    label: "Check Basics",
-    desc: "Before your MOT, ensure your tyres, lights, and wipers are in good condition—it can prevent simple failures.",
+    label: "Clean Underside Regularly",
+    desc: "Regular washing (especially in winter) helps prevent corrosion on the chassis and underbody.",
   },
   {
     icon: <FaBroom className="mx-auto text-4xl text-[#1E3A8A]" />,
-    label: "Keep It Clean",
-    desc: "A clean car (especially under the bonnet and chassis) makes inspection easier and leaves a professional impression.",
+    label: "Combine with MOT Prep",
+    desc: "If your vehicle has rust near key structural points, include welding in your MOT preparation for a smoother pass.",
   },
   {
     icon: <FaFileAlt className="mx-auto text-4xl text-[#1E3A8A]" />,
-    label: "Bring the Paperwork",
-    desc: "Have your previous MOT certificate and V5C logbook ready to speed up the process.",
+    label: "Choose the Right Material",
+    desc: "Ensure welding matches your vehicle’s metal type—aluminium, stainless, or mild steel—to guarantee strength and longevity.",
   },
 ];
 

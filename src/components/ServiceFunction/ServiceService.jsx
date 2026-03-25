@@ -1,25 +1,25 @@
-import { FaCalendarAlt, FaCar, FaBroom, FaFileAlt } from "react-icons/fa";
+import { ClipboardCheck, Droplets, Volume2, History } from "lucide-react";
 
 const stats = [
   {
-    icon: <FaCalendarAlt className="mx-auto text-4xl text-[#1E3A8A]" />,
-    label: "Act Early",
-    desc: "Address rust or cracks as soon as you spot them—early welding can save you from major repairs later.",
+    icon: <ClipboardCheck className="text-4xl mx-auto text-[#1E3A8A]" />,
+    title: "Follow Your Service Schedule",
+    desc: "Stick to your vehicle’s recommended service intervals—usually every 6 or 12 months—to keep it running at its best.",
   },
   {
-    icon: <FaCar className="mx-auto text-4xl text-[#1E3A8A]" />,
-    label: "Clean Underside Regularly",
-    desc: "Regular washing (especially in winter) helps prevent corrosion on the chassis and underbody.",
+    icon: <Droplets className="text-4xl mx-auto text-[#1E3A8A]" />,
+    title: "Use Quality Parts & Fluids",
+    desc: "Always opt for genuine or approved components and high-grade fluids to protect your engine and systems.",
   },
   {
-    icon: <FaBroom className="mx-auto text-4xl text-[#1E3A8A]" />,
-    label: "Combine with MOT Prep",
-    desc: "If your vehicle has rust near key structural points, include welding in your MOT preparation for a smoother pass.",
+    icon: <Volume2 className="text-4xl mx-auto text-[#1E3A8A]" />,
+    title: "Listen to Your Car",
+    desc: "Unusual noises, vibrations, or dashboard warnings often mean it’s time for a check-up—don’t ignore them.",
   },
   {
-    icon: <FaFileAlt className="mx-auto text-4xl text-[#1E3A8A]" />,
-    label: "Choose the Right Material",
-    desc: "Ensure welding matches your vehicle’s metal type—aluminium, stainless, or mild steel—to guarantee strength and longevity.",
+    icon: <History className="text-4xl mx-auto text-[#1E3A8A]" />,
+    title: "Keep Records",
+    desc: "Maintain your service history—it proves care, preserves value, and builds buyer confidence.",
   },
 ];
 
@@ -38,7 +38,7 @@ const ServiceStatsSection = () => {
             >
               {stat.icon}
               <h6 className="text-[#0F216B] font-semibold text-base mt-5 relative inline-block">
-                {stat.label}
+                {stat.title}
                 {/* Yellow underline */}
                 <span className="block w-12 h-1 bg-[#969695] rounded-full mt-2 mx-auto"></span>
               </h6>
